@@ -1,0 +1,2833 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"111 ../../../usb/src/usb_hal.h
+[; ;../../../usb/src/usb_hal.h: 111:   struct {
+[s S317 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S317 . BC8 BC9 PID reserved UOWN ]
+"119
+[; ;../../../usb/src/usb_hal.h: 119:   struct {
+[s S318 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S318 . . . BSTALL DTSEN INCDIS KEN DTS . ]
+"110
+[; ;../../../usb/src/usb_hal.h: 110:  union {
+[u S316 `S317 1 `S318 1 `uc 1 ]
+[n S316 . . . BDnSTAT ]
+"109
+[; ;../../../usb/src/usb_hal.h: 109: struct buffer_descriptor {
+[s S315 `S316 1 `uc 1 `us 1 ]
+[n S315 buffer_descriptor STAT BDnCNT BDnADR ]
+[v F2666 `uc ~T0 @X0 -> 8 `i t ]
+[v F2668 `uc ~T0 @X0 -> 8 `i t ]
+[v F2670 `uc ~T0 @X0 -> 8 `i t ]
+[v F2672 `uc ~T0 @X0 -> 8 `i t ]
+"217 ../../../usb/src/usb.c
+[; ;../../../usb/src/usb.c: 217: static struct {
+[s S333 `F2666 -> -> 1 `i `ux `F2668 -> -> 1 `i `ux `F2670 -> -> 1 `i `ux `F2672 -> -> 1 `i `ux ]
+[n S333 . ep_0_out_buf ep_0_in_buf ep_1_out_buf ep_1_in_buf ]
+[v F2684 `*uc ~T0 @X0 1 t ]
+[v F2686 `*uc ~T0 @X0 1 t ]
+"320
+[; ;../../../usb/src/usb.c: 320: struct ep0_buf {
+[s S335 `C*uc 1 `C*uc 1 `uc 1 ]
+[n S335 ep0_buf out in flags ]
+[v F2676 `*uc ~T0 @X0 1 t ]
+[v F2678 `*uc ~T0 @X0 1 t ]
+"300
+[; ;../../../usb/src/usb.c: 300: struct ep_buf {
+[s S334 `C*uc 1 `C*uc 1 `Cuc 1 `Cuc 1 `uc 1 ]
+[n S334 ep_buf out in out_len in_len flags ]
+[v F2706 `(v ~T0 @X0 0 tf2`a`*v ]
+[v F2720 `(v ~T0 @X0 0 tf2`a`*v ]
+"4637 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4637:     struct {
+[s S247 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S247 . . SUSPND RESUME USBEN PKTDIS SE0 PPBRST ]
+"4636
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4636: typedef union {
+[u S246 `S247 1 ]
+[n S246 . . ]
+"4647
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4647: extern volatile UCONbits_t UCONbits __attribute__((address(0xE8E)));
+[v _UCONbits `VS246 ~T0 @X0 0 e@3726 ]
+"29 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\string.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"4804 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4804:     struct {
+[s S254 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S254 . PPB FSEN . UPUEN . UTEYE ]
+"4812
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4812:     struct {
+[s S255 :1 `uc 1 :1 `uc 1 ]
+[n S255 . PPB0 PPB1 ]
+"4803
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4803: typedef union {
+[u S253 `S254 1 `S255 1 ]
+[n S253 . . . ]
+"4817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4817: extern volatile UCFGbits_t UCFGbits __attribute__((address(0xE91)));
+[v _UCFGbits `VS253 ~T0 @X0 0 e@3729 ]
+"4852
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4852: extern volatile unsigned char UIE __attribute__((address(0xE92)));
+[v _UIE `Vuc ~T0 @X0 0 e@3730 ]
+"5116
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5116: extern volatile unsigned char UEIE __attribute__((address(0xE97)));
+[v _UEIE `Vuc ~T0 @X0 0 e@3735 ]
+"4748
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4748:     struct {
+[s S252 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S252 . URSTIF UERRIF ACTVIF TRNIF IDLEIF STALLIF SOFIF ]
+"4747
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4747: typedef union {
+[u S251 `S252 1 ]
+[n S251 . . ]
+"4758
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4758: extern volatile UIRbits_t UIRbits __attribute__((address(0xE90)));
+[v _UIRbits `VS251 ~T0 @X0 0 e@3728 ]
+"4742
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4742: extern volatile unsigned char UIR __attribute__((address(0xE90)));
+[v _UIR `Vuc ~T0 @X0 0 e@3728 ]
+"4858
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4858:     struct {
+[s S257 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S257 . URSTIE UERRIE ACTVIE TRNIE IDLEIE STALLIE SOFIE ]
+"4857
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4857: typedef union {
+[u S256 `S257 1 ]
+[n S256 . . ]
+"4868
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4868: extern volatile UIEbits_t UIEbits __attribute__((address(0xE92)));
+[v _UIEbits `VS256 ~T0 @X0 0 e@3730 ]
+"5167
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5167: extern volatile unsigned char UEP0 __attribute__((address(0xE98)));
+[v _UEP0 `Vuc ~T0 @X0 0 e@3736 ]
+"5217
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5217:     struct {
+[s S271 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S271 . EPSTALL EPINEN EPOUTEN EPCONDIS EPHSHK ]
+"5216
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5216: typedef union {
+[u S270 `S271 1 ]
+[n S270 . . ]
+"5060
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5060: extern volatile unsigned char UADDR __attribute__((address(0xE96)));
+[v _UADDR `Vuc ~T0 @X0 0 e@3734 ]
+"1093
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1093:     struct {
+[s S67 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S67 . . ACTIE USBIE BCL1IE . C1IE C2IE OSFIE ]
+"1092
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1092: typedef union {
+[u S66 `S67 1 ]
+[n S66 . . ]
+"1104
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1104: extern volatile PIE2bits_t PIE2bits __attribute__((address(0x092)));
+[v _PIE2bits `VS66 ~T0 @X0 0 e@146 ]
+"453 ../../../usb/include\usb.h
+[; ;../../../usb/include\usb.h: 453: _Bool usb_in_endpoint_halted(uint8_t endpoint);
+[v _usb_in_endpoint_halted `(a ~T0 @X0 0 ef1`uc ]
+"27 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\string.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\string.h: 27: void *memcpy (void *restrict, const void *restrict, size_t);
+[v _memcpy `(*v ~T0 @X0 0 ef3`*v`*Cv`ui ]
+"171 ../../../usb/include\usb_ch9.h
+[; ;../../../usb/include\usb_ch9.h: 171:   struct {
+[s S314 :5 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S314 . destination type direction ]
+"170
+[; ;../../../usb/include\usb_ch9.h: 170:  union {
+[u S313 `S314 1 `uc 1 ]
+[n S313 . . bmRequestType ]
+"169
+[; ;../../../usb/include\usb_ch9.h: 169: struct setup_packet {
+[s S312 `S313 1 `uc 1 `us 1 `us 1 `us 1 ]
+[n S312 setup_packet REQUEST bRequest wValue wIndex wLength ]
+"866 ../../../usb/src/usb.c
+[; ;../../../usb/src/usb.c: 866:  if (setup->bRequest == GET_DESCRIPTOR &&
+[c E2518 0 1 3 5 6 7 8 9 10 11 12 .. ]
+[n E2518 StandardControlRequest GET_STATUS CLEAR_FEATURE SET_FEATURE SET_ADDRESS GET_DESCRIPTOR SET_DESCRIPTOR GET_CONFIGURATION SET_CONFIGURATION GET_INTERFACE SET_INTERFACE SYNCH_FRAME  ]
+"871
+[; ;../../../usb/src/usb.c: 871:   if (descriptor == DESC_DEVICE) {
+[c E2530 1 2 3 4 5 6 7 8 9 10 11 .. ]
+[n E2530 DescriptorTypes DESC_DEVICE DESC_CONFIGURATION DESC_STRING DESC_INTERFACE DESC_ENDPOINT DESC_DEVICE_QUALIFIER DESC_OTHER_SPEED_CONFIGURATION DESC_INTERFACE_POWER DESC_OTG DESC_DEBUG DESC_INTERFACE_ASSOCIATION  ]
+"185 ../../../usb/include\usb_ch9.h
+[; ;../../../usb/include\usb_ch9.h: 185: struct device_descriptor {
+[s S309 `uc 1 `uc 1 `us 1 `uc 1 `uc 1 `uc 1 `uc 1 `us 1 `us 1 `us 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S309 device_descriptor bLength bDescriptorType bcdUSB bDeviceClass bDeviceSubclass bDeviceProtocol bMaxPacketSize0 idVendor idProduct bcdDevice iManufacturer iProduct iSerialNumber bNumConfigurations ]
+"92 ../../../usb/include\usb.h
+[; ;../../../usb/include\usb.h: 92: extern const struct device_descriptor this_device_descriptor;
+[v _this_device_descriptor `CS309 ~T0 @X0 0 e ]
+"203 ../../../usb/include\usb_ch9.h
+[; ;../../../usb/include\usb_ch9.h: 203: struct configuration_descriptor {
+[s S311 `uc 1 `uc 1 `us 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S311 configuration_descriptor bLength bDescriptorType wTotalLength bNumInterfaces bConfigurationValue iConfiguration bmAttributes bMaxPower ]
+"110 ../../../usb/include\usb.h
+[; ;../../../usb/include\usb.h: 110: extern const struct configuration_descriptor *usb_application_config_descs[];
+[v _usb_application_config_descs `*CS311 ~T0 @X0 -> 0 `x e ]
+"83
+[; ;../../../usb/include\usb.h: 83: extern int16_t usb_application_get_string(uint8_t string_number, const void **ptr);
+[v _usb_application_get_string `(s ~T0 @X0 0 ef2`uc`**Cv ]
+"316
+[; ;../../../usb/include\usb.h: 316: int16_t app_unknown_get_descriptor_callback(const struct setup_packet *pkt, const void **descriptor);
+[v _app_unknown_get_descriptor_callback `(s ~T0 @X0 0 ef2`*CS312`**Cv ]
+"144
+[; ;../../../usb/include\usb.h: 144: void app_set_configuration_callback(uint8_t configuration);
+[v _app_set_configuration_callback `(v ~T0 @X0 0 ef1`uc ]
+"158
+[; ;../../../usb/include\usb.h: 158: uint16_t app_get_device_status_callback();
+[v _app_get_device_status_callback `(us ~T0 @X0 0 e? ]
+"191
+[; ;../../../usb/include\usb.h: 191: int8_t app_set_interface_callback(uint8_t interface, uint8_t alt_setting);
+[v _app_set_interface_callback `(c ~T0 @X0 0 ef2`uc`uc ]
+"209
+[; ;../../../usb/include\usb.h: 209: int8_t app_get_interface_callback(uint8_t interface);
+[v _app_get_interface_callback `(c ~T0 @X0 0 ef1`uc ]
+"440
+[; ;../../../usb/include\usb.h: 440: uint8_t usb_halt_ep_in(uint8_t ep);
+[v _usb_halt_ep_in `(uc ~T0 @X0 0 ef1`uc ]
+"490
+[; ;../../../usb/include\usb.h: 490: uint8_t usb_halt_ep_out(uint8_t ep);
+[v _usb_halt_ep_out `(uc ~T0 @X0 0 ef1`uc ]
+"172
+[; ;../../../usb/include\usb.h: 172: void app_endpoint_halt_callback(uint8_t endpoint, _Bool halted);
+[v _app_endpoint_halt_callback `(v ~T0 @X0 0 ef2`uc`a ]
+[v F2779 `(v ~T0 @X0 0 tf2`a`*v ]
+"1205 ../../../usb/src/usb.c
+[; ;../../../usb/src/usb.c: 1205:  if (setup->REQUEST.type == REQUEST_TYPE_STANDARD) {
+[c E2513 0 1 2 3 .. ]
+[n E2513 RequestType REQUEST_TYPE_STANDARD REQUEST_TYPE_CLASS REQUEST_TYPE_VENDOR REQUEST_TYPE_RESERVED  ]
+"290 ../../../usb/include\usb.h
+[; ;../../../usb/include\usb.h: 290: int8_t app_unknown_setup_request_callback(const struct setup_packet *pkt);
+[v _app_unknown_setup_request_callback `(c ~T0 @X0 0 ef1`*CS312 ]
+[v F2785 `(v ~T0 @X0 0 tf2`a`*v ]
+[v F2790 `(v ~T0 @X0 0 tf2`a`*v ]
+[v F2797 `(v ~T0 @X0 0 tf2`a`*v ]
+"337
+[; ;../../../usb/include\usb.h: 337: void app_usb_reset_callback(void);
+[v _app_usb_reset_callback `(v ~T0 @X0 0 ef ]
+"4688 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4688:     struct {
+[s S249 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 ]
+[n S249 . . PPBI DIR ENDP ]
+"4694
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4694:     struct {
+[s S250 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S250 . . ENDP0 ENDP1 ENDP2 ENDP3 ]
+"4687
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4687: typedef union {
+[u S248 `S249 1 `S250 1 ]
+[n S248 . . . ]
+"4702
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4702: extern volatile USTATbits_t USTATbits __attribute__((address(0xE8F)));
+[v _USTATbits `VS248 ~T0 @X0 0 e@3727 ]
+"1415 ../../../usb/src/usb.c
+[; ;../../../usb/src/usb.c: 1415:    if (pid == PID_SETUP) {
+[c E2490 1 9 5 13 3 11 7 15 2 10 14 6 12 12 8 4 0 .. ]
+[n E2490 PID PID_OUT PID_IN PID_SOF PID_SETUP PID_DATA0 PID_DATA1 PID_DATA2 PID_MDATA PID_ACK PID_NAK PID_STALL PID_NYET PID_PRE PID_ERR PID_SPLIT PID_PING PID_RESERVED  ]
+"243 ../../../usb/include\usb.h
+[; ;../../../usb/include\usb.h: 243: void app_in_transaction_complete_callback(uint8_t endpoint);
+[v _app_in_transaction_complete_callback `(v ~T0 @X0 0 ef1`uc ]
+"226
+[; ;../../../usb/include\usb.h: 226: void app_out_transaction_callback(uint8_t endpoint);
+[v _app_out_transaction_callback `(v ~T0 @X0 0 ef1`uc ]
+"327
+[; ;../../../usb/include\usb.h: 327: void app_start_of_frame_callback(void);
+[v _app_start_of_frame_callback `(v ~T0 @X0 0 ef ]
+"587 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 587:     struct {
+[s S40 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S40 . . ACTIF USBIF BCL1IF . C1IF C2IF OSFIF ]
+"586
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 586: typedef union {
+[u S39 `S40 1 ]
+[n S39 . . ]
+"598
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 598: extern volatile PIR2bits_t PIR2bits __attribute__((address(0x012)));
+[v _PIR2bits `VS39 ~T0 @X0 0 e@18 ]
+[v F2833 `(v ~T0 @X0 0 tf2`a`*v ]
+[v F2839 `(v ~T0 @X0 0 tf2`a`*v ]
+[v F2847 `(v ~T0 @X0 0 tf2`a`*v ]
+[v F2853 `(v ~T0 @X0 0 tf2`a`*v ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 54: __asm("INDF0 equ 00h");
+[; <" INDF0 equ 00h ;# ">
+"74
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 74: __asm("INDF1 equ 01h");
+[; <" INDF1 equ 01h ;# ">
+"94
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 94: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"114
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 114: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"177
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 177: __asm("FSR0L equ 04h");
+[; <" FSR0L equ 04h ;# ">
+"197
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 197: __asm("FSR0H equ 05h");
+[; <" FSR0H equ 05h ;# ">
+"221
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 221: __asm("FSR1L equ 06h");
+[; <" FSR1L equ 06h ;# ">
+"241
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 241: __asm("FSR1H equ 07h");
+[; <" FSR1H equ 07h ;# ">
+"261
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 261: __asm("BSR equ 08h");
+[; <" BSR equ 08h ;# ">
+"313
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 313: __asm("WREG equ 09h");
+[; <" WREG equ 09h ;# ">
+"333
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 333: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"353
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 353: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"431
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 431: __asm("PORTA equ 0Ch");
+[; <" PORTA equ 0Ch ;# ">
+"476
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 476: __asm("PORTC equ 0Eh");
+[; <" PORTC equ 0Eh ;# ">
+"526
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 526: __asm("PIR1 equ 011h");
+[; <" PIR1 equ 011h ;# ">
+"583
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 583: __asm("PIR2 equ 012h");
+[; <" PIR2 equ 012h ;# ">
+"635
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 635: __asm("TMR0 equ 015h");
+[; <" TMR0 equ 015h ;# ">
+"655
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 655: __asm("TMR1 equ 016h");
+[; <" TMR1 equ 016h ;# ">
+"662
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 662: __asm("TMR1L equ 016h");
+[; <" TMR1L equ 016h ;# ">
+"682
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 682: __asm("TMR1H equ 017h");
+[; <" TMR1H equ 017h ;# ">
+"702
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 702: __asm("T1CON equ 018h");
+[; <" T1CON equ 018h ;# ">
+"774
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 774: __asm("T1GCON equ 019h");
+[; <" T1GCON equ 019h ;# ">
+"844
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 844: __asm("TMR2 equ 01Ah");
+[; <" TMR2 equ 01Ah ;# ">
+"864
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 864: __asm("PR2 equ 01Bh");
+[; <" PR2 equ 01Bh ;# ">
+"884
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 884: __asm("T2CON equ 01Ch");
+[; <" T2CON equ 01Ch ;# ">
+"955
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 955: __asm("TRISA equ 08Ch");
+[; <" TRISA equ 08Ch ;# ">
+"982
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 982: __asm("TRISC equ 08Eh");
+[; <" TRISC equ 08Eh ;# ">
+"1032
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1032: __asm("PIE1 equ 091h");
+[; <" PIE1 equ 091h ;# ">
+"1089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1089: __asm("PIE2 equ 092h");
+[; <" PIE2 equ 092h ;# ">
+"1141
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1141: __asm("OPTION_REG equ 095h");
+[; <" OPTION_REG equ 095h ;# ">
+"1224
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1224: __asm("PCON equ 096h");
+[; <" PCON equ 096h ;# ">
+"1281
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1281: __asm("WDTCON equ 097h");
+[; <" WDTCON equ 097h ;# ">
+"1340
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1340: __asm("OSCTUNE equ 098h");
+[; <" OSCTUNE equ 098h ;# ">
+"1404
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1404: __asm("OSCCON equ 099h");
+[; <" OSCCON equ 099h ;# ">
+"1480
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1480: __asm("OSCSTAT equ 09Ah");
+[; <" OSCSTAT equ 09Ah ;# ">
+"1531
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1531: __asm("ADRES equ 09Bh");
+[; <" ADRES equ 09Bh ;# ">
+"1538
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1538: __asm("ADRESL equ 09Bh");
+[; <" ADRESL equ 09Bh ;# ">
+"1558
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1558: __asm("ADRESH equ 09Ch");
+[; <" ADRESH equ 09Ch ;# ">
+"1578
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1578: __asm("ADCON0 equ 09Dh");
+[; <" ADCON0 equ 09Dh ;# ">
+"1658
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1658: __asm("ADCON1 equ 09Eh");
+[; <" ADCON1 equ 09Eh ;# ">
+"1724
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1724: __asm("ADCON2 equ 09Fh");
+[; <" ADCON2 equ 09Fh ;# ">
+"1766
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1766: __asm("LATA equ 010Ch");
+[; <" LATA equ 010Ch ;# ">
+"1793
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1793: __asm("LATC equ 010Eh");
+[; <" LATC equ 010Eh ;# ">
+"1843
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1843: __asm("CM1CON0 equ 0111h");
+[; <" CM1CON0 equ 0111h ;# ">
+"1900
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1900: __asm("CM1CON1 equ 0112h");
+[; <" CM1CON1 equ 0112h ;# ">
+"1972
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 1972: __asm("CM2CON0 equ 0113h");
+[; <" CM2CON0 equ 0113h ;# ">
+"2029
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2029: __asm("CM2CON1 equ 0114h");
+[; <" CM2CON1 equ 0114h ;# ">
+"2101
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2101: __asm("CMOUT equ 0115h");
+[; <" CMOUT equ 0115h ;# ">
+"2127
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2127: __asm("BORCON equ 0116h");
+[; <" BORCON equ 0116h ;# ">
+"2160
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2160: __asm("FVRCON equ 0117h");
+[; <" FVRCON equ 0117h ;# ">
+"2236
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2236: __asm("DACCON0 equ 0118h");
+[; <" DACCON0 equ 0118h ;# ">
+"2291
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2291: __asm("DACCON1 equ 0119h");
+[; <" DACCON1 equ 0119h ;# ">
+"2343
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2343: __asm("APFCON equ 011Dh");
+[; <" APFCON equ 011Dh ;# ">
+"2389
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2389: __asm("ANSELA equ 018Ch");
+[; <" ANSELA equ 018Ch ;# ">
+"2418
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2418: __asm("ANSELC equ 018Eh");
+[; <" ANSELC equ 018Eh ;# ">
+"2464
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2464: __asm("PMADR equ 0191h");
+[; <" PMADR equ 0191h ;# ">
+"2471
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2471: __asm("PMADRL equ 0191h");
+[; <" PMADRL equ 0191h ;# ">
+"2491
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2491: __asm("PMADRH equ 0192h");
+[; <" PMADRH equ 0192h ;# ">
+"2511
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2511: __asm("PMDAT equ 0193h");
+[; <" PMDAT equ 0193h ;# ">
+"2518
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2518: __asm("PMDATL equ 0193h");
+[; <" PMDATL equ 0193h ;# ">
+"2538
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2538: __asm("PMDATH equ 0194h");
+[; <" PMDATH equ 0194h ;# ">
+"2558
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2558: __asm("PMCON1 equ 0195h");
+[; <" PMCON1 equ 0195h ;# ">
+"2614
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2614: __asm("PMCON2 equ 0196h");
+[; <" PMCON2 equ 0196h ;# ">
+"2634
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2634: __asm("VREGCON equ 0197h");
+[; <" VREGCON equ 0197h ;# ">
+"2668
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2668: __asm("RCREG equ 0199h");
+[; <" RCREG equ 0199h ;# ">
+"2688
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2688: __asm("TXREG equ 019Ah");
+[; <" TXREG equ 019Ah ;# ">
+"2708
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2708: __asm("SPBRG equ 019Bh");
+[; <" SPBRG equ 019Bh ;# ">
+"2715
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2715: __asm("SPBRGL equ 019Bh");
+[; <" SPBRGL equ 019Bh ;# ">
+"2735
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2735: __asm("SPBRGH equ 019Ch");
+[; <" SPBRGH equ 019Ch ;# ">
+"2755
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2755: __asm("RCSTA equ 019Dh");
+[; <" RCSTA equ 019Dh ;# ">
+"2817
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2817: __asm("TXSTA equ 019Eh");
+[; <" TXSTA equ 019Eh ;# ">
+"2879
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2879: __asm("BAUDCON equ 019Fh");
+[; <" BAUDCON equ 019Fh ;# ">
+"2931
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2931: __asm("WPUA equ 020Ch");
+[; <" WPUA equ 020Ch ;# ">
+"2972
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2972: __asm("SSP1BUF equ 0211h");
+[; <" SSP1BUF equ 0211h ;# ">
+"2977
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 2977: __asm("SSPBUF equ 0211h");
+[; <" SSPBUF equ 0211h ;# ">
+"3010
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3010: __asm("SSP1ADD equ 0212h");
+[; <" SSP1ADD equ 0212h ;# ">
+"3015
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3015: __asm("SSPADD equ 0212h");
+[; <" SSPADD equ 0212h ;# ">
+"3048
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3048: __asm("SSP1MSK equ 0213h");
+[; <" SSP1MSK equ 0213h ;# ">
+"3053
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3053: __asm("SSPMSK equ 0213h");
+[; <" SSPMSK equ 0213h ;# ">
+"3086
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3086: __asm("SSP1STAT equ 0214h");
+[; <" SSP1STAT equ 0214h ;# ">
+"3091
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3091: __asm("SSPSTAT equ 0214h");
+[; <" SSPSTAT equ 0214h ;# ">
+"3208
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3208: __asm("SSP1CON1 equ 0215h");
+[; <" SSP1CON1 equ 0215h ;# ">
+"3213
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3213: __asm("SSPCON equ 0215h");
+[; <" SSPCON equ 0215h ;# ">
+"3217
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3217: __asm("SSPCON1 equ 0215h");
+[; <" SSPCON1 equ 0215h ;# ">
+"3451
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3451: __asm("SSP1CON2 equ 0216h");
+[; <" SSP1CON2 equ 0216h ;# ">
+"3456
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3456: __asm("SSPCON2 equ 0216h");
+[; <" SSPCON2 equ 0216h ;# ">
+"3573
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3573: __asm("SSP1CON3 equ 0217h");
+[; <" SSP1CON3 equ 0217h ;# ">
+"3578
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3578: __asm("SSPCON3 equ 0217h");
+[; <" SSPCON3 equ 0217h ;# ">
+"3695
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3695: __asm("IOCAP equ 0391h");
+[; <" IOCAP equ 0391h ;# ">
+"3748
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3748: __asm("IOCAN equ 0392h");
+[; <" IOCAN equ 0392h ;# ">
+"3801
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3801: __asm("IOCAF equ 0393h");
+[; <" IOCAF equ 0393h ;# ">
+"3854
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3854: __asm("CLKRCON equ 039Ah");
+[; <" CLKRCON equ 039Ah ;# ">
+"3930
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3930: __asm("ACTCON equ 039Bh");
+[; <" ACTCON equ 039Bh ;# ">
+"3977
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 3977: __asm("PWM1DCL equ 0611h");
+[; <" PWM1DCL equ 0611h ;# ">
+"4013
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4013: __asm("PWM1DCH equ 0612h");
+[; <" PWM1DCH equ 0612h ;# ">
+"4083
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4083: __asm("PWM1CON equ 0613h");
+[; <" PWM1CON equ 0613h ;# ">
+"4088
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4088: __asm("PWM1CON0 equ 0613h");
+[; <" PWM1CON0 equ 0613h ;# ">
+"4159
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4159: __asm("PWM2DCL equ 0614h");
+[; <" PWM2DCL equ 0614h ;# ">
+"4195
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4195: __asm("PWM2DCH equ 0615h");
+[; <" PWM2DCH equ 0615h ;# ">
+"4265
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4265: __asm("PWM2CON equ 0616h");
+[; <" PWM2CON equ 0616h ;# ">
+"4270
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4270: __asm("PWM2CON0 equ 0616h");
+[; <" PWM2CON0 equ 0616h ;# ">
+"4341
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4341: __asm("CWG1DBR equ 0691h");
+[; <" CWG1DBR equ 0691h ;# ">
+"4399
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4399: __asm("CWG1DBF equ 0692h");
+[; <" CWG1DBF equ 0692h ;# ">
+"4457
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4457: __asm("CWG1CON0 equ 0693h");
+[; <" CWG1CON0 equ 0693h ;# ">
+"4516
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4516: __asm("CWG1CON1 equ 0694h");
+[; <" CWG1CON1 equ 0694h ;# ">
+"4587
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4587: __asm("CWG1CON2 equ 0695h");
+[; <" CWG1CON2 equ 0695h ;# ">
+"4633
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4633: __asm("UCON equ 0E8Eh");
+[; <" UCON equ 0E8Eh ;# ">
+"4684
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4684: __asm("USTAT equ 0E8Fh");
+[; <" USTAT equ 0E8Fh ;# ">
+"4744
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4744: __asm("UIR equ 0E90h");
+[; <" UIR equ 0E90h ;# ">
+"4800
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4800: __asm("UCFG equ 0E91h");
+[; <" UCFG equ 0E91h ;# ">
+"4854
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4854: __asm("UIE equ 0E92h");
+[; <" UIE equ 0E92h ;# ">
+"4910
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4910: __asm("UEIR equ 0E93h");
+[; <" UEIR equ 0E93h ;# ">
+"4961
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4961: __asm("UFRM equ 0E94h");
+[; <" UFRM equ 0E94h ;# ">
+"4968
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 4968: __asm("UFRMH equ 0E94h");
+[; <" UFRMH equ 0E94h ;# ">
+"5000
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5000: __asm("UFRML equ 0E95h");
+[; <" UFRML equ 0E95h ;# ">
+"5062
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5062: __asm("UADDR equ 0E96h");
+[; <" UADDR equ 0E96h ;# ">
+"5118
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5118: __asm("UEIE equ 0E97h");
+[; <" UEIE equ 0E97h ;# ">
+"5169
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5169: __asm("UEP0 equ 0E98h");
+[; <" UEP0 equ 0E98h ;# ">
+"5213
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5213: __asm("UEP1 equ 0E99h");
+[; <" UEP1 equ 0E99h ;# ">
+"5257
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5257: __asm("UEP2 equ 0E9Ah");
+[; <" UEP2 equ 0E9Ah ;# ">
+"5301
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5301: __asm("UEP3 equ 0E9Bh");
+[; <" UEP3 equ 0E9Bh ;# ">
+"5345
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5345: __asm("UEP4 equ 0E9Ch");
+[; <" UEP4 equ 0E9Ch ;# ">
+"5389
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5389: __asm("UEP5 equ 0E9Dh");
+[; <" UEP5 equ 0E9Dh ;# ">
+"5433
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5433: __asm("UEP6 equ 0E9Eh");
+[; <" UEP6 equ 0E9Eh ;# ">
+"5477
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5477: __asm("UEP7 equ 0E9Fh");
+[; <" UEP7 equ 0E9Fh ;# ">
+"5521
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5521: __asm("STATUS_SHAD equ 0FE4h");
+[; <" STATUS_SHAD equ 0FE4h ;# ">
+"5553
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5553: __asm("WREG_SHAD equ 0FE5h");
+[; <" WREG_SHAD equ 0FE5h ;# ">
+"5573
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5573: __asm("BSR_SHAD equ 0FE6h");
+[; <" BSR_SHAD equ 0FE6h ;# ">
+"5593
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5593: __asm("PCLATH_SHAD equ 0FE7h");
+[; <" PCLATH_SHAD equ 0FE7h ;# ">
+"5613
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5613: __asm("FSR0L_SHAD equ 0FE8h");
+[; <" FSR0L_SHAD equ 0FE8h ;# ">
+"5633
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5633: __asm("FSR0H_SHAD equ 0FE9h");
+[; <" FSR0H_SHAD equ 0FE9h ;# ">
+"5653
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5653: __asm("FSR1L_SHAD equ 0FEAh");
+[; <" FSR1L_SHAD equ 0FEAh ;# ">
+"5673
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5673: __asm("FSR1H_SHAD equ 0FEBh");
+[; <" FSR1H_SHAD equ 0FEBh ;# ">
+"5693
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5693: __asm("STKPTR equ 0FEDh");
+[; <" STKPTR equ 0FEDh ;# ">
+"5713
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5713: __asm("TOSL equ 0FEEh");
+[; <" TOSL equ 0FEEh ;# ">
+"5733
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1455.h: 5733: __asm("TOSH equ 0FEFh");
+[; <" TOSH equ 0FEFh ;# ">
+"59 ../../../usb/src/usb.c
+[p n 1088 ]
+"66
+[p n 1471 ]
+"200
+[; ;../../../usb/src/usb.c: 200: static struct buffer_descriptor bds[(2 * (1) + 2)] __attribute__((address(0x2000)));
+[v _bds `S315 ~T0 @X0 -> 4 `i s@8192 ]
+"298
+[; ;../../../usb/src/usb.c: 298: } ep_buffers __attribute__((address(0x2080)));
+[v _ep_buffers `S333 ~T0 @X0 1 s@8320 ]
+"372
+[; ;../../../usb/src/usb.c: 372: static struct ep0_buf ep0_buf = { ep_buffers.ep_0_out_buf[0], ep_buffers.ep_0_in_buf[0] };
+[v _ep0_buf `S335 ~T0 @X0 1 s ]
+[i _ep0_buf
+:U ..
+:U ..
+&U *U + &U . _ep_buffers 0 * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U . _ep_buffers 0 `ui -> -> 8 `i `ui `ux
+&U *U + &U . _ep_buffers 1 * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U . _ep_buffers 1 `ui -> -> 8 `i `ui `ux
+..
+..
+]
+"374
+[; ;../../../usb/src/usb.c: 374: static struct ep_buf ep_buf[1 +1] = {
+[v _ep_buf `S334 ~T0 @X0 -> 2 `i s ]
+[i _ep_buf
+:U ..
+:U ..
+[v F2694 `*uc ~T0 @X0 1 t ]
+-> -> -> 0 `i `*v `C*uc
+[v F2695 `*uc ~T0 @X0 1 t ]
+-> -> -> 0 `i `*v `C*uc
+..
+:U ..
+&U *U + &U . _ep_buffers 2 * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U . _ep_buffers 2 `ui -> -> 8 `i `ui `ux
+&U *U + &U . _ep_buffers 3 * -> -> -> 0 `i `ui `ux -> * -> # *U &U *U &U . _ep_buffers 3 `ui -> -> 8 `i `ui `ux
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+..
+..
+]
+"430
+[; ;../../../usb/src/usb.c: 430: static _Bool addr_pending;
+[v _addr_pending `a ~T0 @X0 1 s ]
+"431
+[; ;../../../usb/src/usb.c: 431: static uint8_t addr;
+[v _addr `uc ~T0 @X0 1 s ]
+"432
+[; ;../../../usb/src/usb.c: 432: static uint8_t g_configuration;
+[v _g_configuration `uc ~T0 @X0 1 s ]
+"433
+[; ;../../../usb/src/usb.c: 433: static _Bool control_need_zlp;
+[v _control_need_zlp `a ~T0 @X0 1 s ]
+"434
+[; ;../../../usb/src/usb.c: 434: static _Bool returning_short;
+[v _returning_short `a ~T0 @X0 1 s ]
+"437
+[; ;../../../usb/src/usb.c: 437: static usb_ep0_data_stage_callback ep0_data_stage_callback;
+[v _ep0_data_stage_callback `*F2706 ~T0 @X0 1 s ]
+"438
+[; ;../../../usb/src/usb.c: 438: static char *ep0_data_stage_in_buffer;
+[v _ep0_data_stage_in_buffer `*uc ~T0 @X0 1 s ]
+"439
+[; ;../../../usb/src/usb.c: 439: static char *ep0_data_stage_out_buffer;
+[v _ep0_data_stage_out_buffer `*uc ~T0 @X0 1 s ]
+"440
+[; ;../../../usb/src/usb.c: 440: static size_t ep0_data_stage_buf_remaining;
+[v _ep0_data_stage_buf_remaining `ui ~T0 @X0 1 s ]
+"441
+[; ;../../../usb/src/usb.c: 441: static void *ep0_data_stage_context;
+[v _ep0_data_stage_context `*v ~T0 @X0 1 s ]
+"442
+[; ;../../../usb/src/usb.c: 442: static uint8_t ep0_data_stage_direc;
+[v _ep0_data_stage_direc `uc ~T0 @X0 1 s ]
+"456
+[; ;../../../usb/src/usb.c: 456: static uint16_t pic16_linear_addr(void *ptr)
+[v _pic16_linear_addr `(us ~T0 @X0 1 sf1`*v ]
+"457
+[; ;../../../usb/src/usb.c: 457: {
+{
+[e :U _pic16_linear_addr ]
+"456
+[; ;../../../usb/src/usb.c: 456: static uint16_t pic16_linear_addr(void *ptr)
+[v _ptr `*v ~T0 @X0 1 r1 ]
+"457
+[; ;../../../usb/src/usb.c: 457: {
+[f ]
+"458
+[; ;../../../usb/src/usb.c: 458:  uint8_t high, low;
+[v _high `uc ~T0 @X0 1 a ]
+[v _low `uc ~T0 @X0 1 a ]
+"459
+[; ;../../../usb/src/usb.c: 459:  uint16_t addr = (uint16_t) ptr;
+[v _addr `us ~T0 @X0 1 a ]
+[e = _addr -> _ptr `us ]
+"462
+[; ;../../../usb/src/usb.c: 462:  if (addr >= 0x2000)
+[e $ ! >= -> _addr `ui -> -> 8192 `i `ui 337  ]
+"463
+[; ;../../../usb/src/usb.c: 463:   return addr;
+[e ) _addr ]
+[e $UE 336  ]
+[e :U 337 ]
+"465
+[; ;../../../usb/src/usb.c: 465:  high = (addr & 0xff00) >> 8;
+[e = _high -> >> & -> _addr `ui -> 65280 `ui -> 8 `i `uc ]
+"466
+[; ;../../../usb/src/usb.c: 466:  low = addr & 0x00ff;
+[e = _low -> & -> _addr `ui -> -> 255 `i `ui `uc ]
+"468
+[; ;../../../usb/src/usb.c: 468:  return 0x2000 +
+[e ) -> + - + -> 8192 `i & -> _low `i -> 127 `i -> 32 `i * ? != + << -> _high `i -> 1 `i & -> _low `i -> 128 `i -> 0 `i : -> 1 `i -> 0 `i -> 80 `i `us ]
+[e $UE 336  ]
+"471
+[; ;../../../usb/src/usb.c: 471: }
+[e :UE 336 ]
+}
+"474
+[; ;../../../usb/src/usb.c: 474: static void reset_ep0_data_stage()
+[v _reset_ep0_data_stage `(v ~T0 @X0 1 sf ]
+"475
+[; ;../../../usb/src/usb.c: 475: {
+{
+[e :U _reset_ep0_data_stage ]
+[f ]
+"476
+[; ;../../../usb/src/usb.c: 476:  ep0_data_stage_in_buffer = ((void*)0);
+[e = _ep0_data_stage_in_buffer -> -> -> 0 `i `*v `*uc ]
+"477
+[; ;../../../usb/src/usb.c: 477:  ep0_data_stage_out_buffer = ((void*)0);
+[e = _ep0_data_stage_out_buffer -> -> -> 0 `i `*v `*uc ]
+"478
+[; ;../../../usb/src/usb.c: 478:  ep0_data_stage_buf_remaining = 0;
+[e = _ep0_data_stage_buf_remaining -> -> 0 `i `ui ]
+"479
+[; ;../../../usb/src/usb.c: 479:  ep0_data_stage_callback = ((void*)0);
+[e = _ep0_data_stage_callback -> -> -> 0 `i `*v `*F2720 ]
+"486
+[; ;../../../usb/src/usb.c: 486: }
+[e :UE 338 ]
+}
+"495
+[; ;../../../usb/src/usb.c: 495: static void init_endpoints(void)
+[v _init_endpoints `(v ~T0 @X0 1 sf ]
+"496
+[; ;../../../usb/src/usb.c: 496: {
+{
+[e :U _init_endpoints ]
+[f ]
+"497
+[; ;../../../usb/src/usb.c: 497:  uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"501
+[; ;../../../usb/src/usb.c: 501:  UCONbits.PPBRST = 1;
+[e = . . _UCONbits 0 6 -> -> 1 `i `uc ]
+"503
+[; ;../../../usb/src/usb.c: 503:  ep0_buf.flags = 0;
+[e = . _ep0_buf 2 -> -> 0 `i `uc ]
+"504
+[; ;../../../usb/src/usb.c: 504:  for (i = 0; i <= 1; i++) {
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ <= -> _i `i -> 1 `i 340  ]
+[e $U 341  ]
+[e :U 340 ]
+{
+"508
+[; ;../../../usb/src/usb.c: 508:   ep_buf[i].flags = 0x4;
+[e = . *U + &U _ep_buf * -> _i `ux -> -> # *U &U _ep_buf `ui `ux 4 -> -> 4 `i `uc ]
+"510
+[; ;../../../usb/src/usb.c: 510:  }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ <= -> _i `i -> 1 `i 340  ]
+[e :U 341 ]
+}
+"513
+[; ;../../../usb/src/usb.c: 513:  memset(bds, 0x0, sizeof(bds));
+[e ( _memset (3 , , -> &U _bds `*v -> 0 `i -> # _bds `ui ]
+"517
+[; ;../../../usb/src/usb.c: 517:  bds[0].BDnADR = (uint16_t) pic16_linear_addr(ep0_buf.out);
+[e = . *U + &U _bds * -> -> -> 0 `i `ui `ux -> -> # *U &U _bds `ui `ux 2 ( _pic16_linear_addr (1 -> . _ep0_buf 0 `*v ]
+"518
+[; ;../../../usb/src/usb.c: 518:  do { (bds[0]).BDnCNT = (8); (bds[0]).STAT.BDnSTAT = (0x80); } while(0);
+[e :U 345 ]
+{
+[e = . *U + &U _bds * -> -> -> 0 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 -> -> 8 `i `uc ]
+[e = . . *U + &U _bds * -> -> -> 0 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> -> 128 `i `uc ]
+}
+[e :U 344 ]
+"527
+[; ;../../../usb/src/usb.c: 527:  bds[1].BDnADR = (uint16_t) pic16_linear_addr(ep0_buf.in);
+[e = . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 2 ( _pic16_linear_addr (1 -> . _ep0_buf 1 `*v ]
+"528
+[; ;../../../usb/src/usb.c: 528:  do { (bds[1]).BDnCNT = (8); (bds[1]).STAT.BDnSTAT = (0); } while(0);
+[e :U 348 ]
+{
+[e = . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 -> -> 8 `i `uc ]
+[e = . . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> -> 0 `i `uc ]
+}
+[e :U 347 ]
+"534
+[; ;../../../usb/src/usb.c: 534:  for (i = 1; i <= 1; i++) {
+{
+[e = _i -> -> 1 `i `uc ]
+[e $ <= -> _i `i -> 1 `i 349  ]
+[e $U 350  ]
+[e :U 349 ]
+{
+"537
+[; ;../../../usb/src/usb.c: 537:   bds[(i) * 2].BDnADR = (uint16_t) pic16_linear_addr(ep_buf[i].out);
+[e = . *U + &U _bds * -> -> * -> _i `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 2 ( _pic16_linear_addr (1 -> . *U + &U _ep_buf * -> _i `ux -> -> # *U &U _ep_buf `ui `ux 0 `*v ]
+"538
+[; ;../../../usb/src/usb.c: 538:   do { (bds[(i) * 2]).BDnCNT = (ep_buf[i].out_len); (bds[(i) * 2]).STAT.BDnSTAT = (0x80|0x08); } while(0);
+[e :U 354 ]
+{
+[e = . *U + &U _bds * -> -> * -> _i `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 . *U + &U _ep_buf * -> _i `ux -> -> # *U &U _ep_buf `ui `ux 2 ]
+[e = . . *U + &U _bds * -> -> * -> _i `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> | -> 128 `i -> 8 `i `uc ]
+}
+[e :U 353 ]
+"546
+[; ;../../../usb/src/usb.c: 546:   bds[(i) * 2 + 1].BDnADR = (uint16_t) pic16_linear_addr(ep_buf[i].in);
+[e = . *U + &U _bds * -> -> + * -> _i `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 2 ( _pic16_linear_addr (1 -> . *U + &U _ep_buf * -> _i `ux -> -> # *U &U _ep_buf `ui `ux 1 `*v ]
+"547
+[; ;../../../usb/src/usb.c: 547:   do { (bds[(i) * 2 + 1]).BDnCNT = (ep_buf[i].in_len); (bds[(i) * 2 + 1]).STAT.BDnSTAT = (0); } while(0);
+[e :U 357 ]
+{
+[e = . *U + &U _bds * -> -> + * -> _i `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 . *U + &U _ep_buf * -> _i `ux -> -> # *U &U _ep_buf `ui `ux 3 ]
+[e = . . *U + &U _bds * -> -> + * -> _i `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> -> 0 `i `uc ]
+}
+[e :U 356 ]
+"553
+[; ;../../../usb/src/usb.c: 553:  }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ <= -> _i `i -> 1 `i 349  ]
+[e :U 350 ]
+}
+"555
+[; ;../../../usb/src/usb.c: 555:  UCONbits.PPBRST = 0;
+[e = . . _UCONbits 0 6 -> -> 0 `i `uc ]
+"556
+[; ;../../../usb/src/usb.c: 556: }
+[e :UE 339 ]
+}
+"561
+[; ;../../../usb/src/usb.c: 561: void usb_init(void)
+[v _usb_init `(v ~T0 @X0 1 ef ]
+"562
+[; ;../../../usb/src/usb.c: 562: {
+{
+[e :U _usb_init ]
+[f ]
+"563
+[; ;../../../usb/src/usb.c: 563:  uint8_t i;
+[v _i `uc ~T0 @X0 1 a ]
+"567
+[; ;../../../usb/src/usb.c: 567:  do { UCFGbits.PPB0 = 0 & 1; UCFGbits.PPB1 = (0 & 2)? 1: 0; } while (0);
+[e :U 361 ]
+{
+[e = . . _UCFGbits 1 0 -> & -> 0 `i -> 1 `i `uc ]
+[e = . . _UCFGbits 1 1 -> ? != & -> 0 `i -> 2 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
+}
+[e :U 360 ]
+"573
+[; ;../../../usb/src/usb.c: 573:  UIE = 0x0;
+[e = _UIE -> -> 0 `i `uc ]
+"574
+[; ;../../../usb/src/usb.c: 574:  UEIE = 0x0;
+[e = _UEIE -> -> 0 `i `uc ]
+"576
+[; ;../../../usb/src/usb.c: 576:  UCONbits.USBEN = 1;
+[e = . . _UCONbits 0 3 -> -> 1 `i `uc ]
+"584
+[; ;../../../usb/src/usb.c: 584:  UCFGbits.UPUEN = 1;
+[e = . . _UCFGbits 0 3 -> -> 1 `i `uc ]
+"592
+[; ;../../../usb/src/usb.c: 592:  UCFGbits.FSEN = 1;
+[e = . . _UCFGbits 0 1 -> -> 1 `i `uc ]
+"595
+[; ;../../../usb/src/usb.c: 595:  UIRbits.TRNIF = 0;
+[e = . . _UIRbits 0 3 -> -> 0 `i `uc ]
+"596
+[; ;../../../usb/src/usb.c: 596:  UIRbits.TRNIF = 0;
+[e = . . _UIRbits 0 3 -> -> 0 `i `uc ]
+"597
+[; ;../../../usb/src/usb.c: 597:  UIRbits.TRNIF = 0;
+[e = . . _UIRbits 0 3 -> -> 0 `i `uc ]
+"598
+[; ;../../../usb/src/usb.c: 598:  UIRbits.TRNIF = 0;
+[e = . . _UIRbits 0 3 -> -> 0 `i `uc ]
+"600
+[; ;../../../usb/src/usb.c: 600:  UIR = 0;
+[e = _UIR -> -> 0 `i `uc ]
+"603
+[; ;../../../usb/src/usb.c: 603:  UIEbits.TRNIE = 1;
+[e = . . _UIEbits 0 3 -> -> 1 `i `uc ]
+"604
+[; ;../../../usb/src/usb.c: 604:  UIEbits.STALLIE = 1;
+[e = . . _UIEbits 0 5 -> -> 1 `i `uc ]
+"605
+[; ;../../../usb/src/usb.c: 605:  UIEbits.URSTIE = 1;
+[e = . . _UIEbits 0 0 -> -> 1 `i `uc ]
+"607
+[; ;../../../usb/src/usb.c: 607:  UIEbits.SOFIE = 1;
+[e = . . _UIEbits 0 6 -> -> 1 `i `uc ]
+"650
+[; ;../../../usb/src/usb.c: 650:  memset(((UEP1bits_t*) (&UEP0 + 1 * (0))), 0x0, sizeof(*((UEP1bits_t*) (&UEP0 + 1 * (0)))) * 16);
+[e ( _memset (3 , , -> -> + &U _UEP0 * -> * -> 1 `i -> 0 `i `x -> -> # *U &U _UEP0 `i `x `*S270 `*v -> 0 `i * -> # *U -> + &U _UEP0 * -> * -> 1 `i -> 0 `i `x -> -> # *U &U _UEP0 `i `x `*S270 `ui -> -> 16 `i `ui ]
+"653
+[; ;../../../usb/src/usb.c: 653:  ((UEP1bits_t*) (&UEP0 + 1 * (0)))->EPHSHK = 1;
+[e = . . *U -> + &U _UEP0 * -> * -> 1 `i -> 0 `i `x -> -> # *U &U _UEP0 `i `x `*S270 0 4 -> -> 1 `i `uc ]
+"654
+[; ;../../../usb/src/usb.c: 654:  ((UEP1bits_t*) (&UEP0 + 1 * (0)))->EPCONDIS = 0;
+[e = . . *U -> + &U _UEP0 * -> * -> 1 `i -> 0 `i `x -> -> # *U &U _UEP0 `i `x `*S270 0 3 -> -> 0 `i `uc ]
+"655
+[; ;../../../usb/src/usb.c: 655:  ((UEP1bits_t*) (&UEP0 + 1 * (0)))->EPOUTEN = 1;
+[e = . . *U -> + &U _UEP0 * -> * -> 1 `i -> 0 `i `x -> -> # *U &U _UEP0 `i `x `*S270 0 2 -> -> 1 `i `uc ]
+"656
+[; ;../../../usb/src/usb.c: 656:  ((UEP1bits_t*) (&UEP0 + 1 * (0)))->EPINEN = 1;
+[e = . . *U -> + &U _UEP0 * -> * -> 1 `i -> 0 `i `x -> -> # *U &U _UEP0 `i `x `*S270 0 1 -> -> 1 `i `uc ]
+"657
+[; ;../../../usb/src/usb.c: 657:  ((UEP1bits_t*) (&UEP0 + 1 * (0)))->EPSTALL = 0;
+[e = . . *U -> + &U _UEP0 * -> * -> 1 `i -> 0 `i `x -> -> # *U &U _UEP0 `i `x `*S270 0 0 -> -> 0 `i `uc ]
+"659
+[; ;../../../usb/src/usb.c: 659:  for (i = 1; i <= 1; i++) {
+{
+[e = _i -> -> 1 `i `uc ]
+[e $ <= -> _i `i -> 1 `i 362  ]
+[e $U 363  ]
+[e :U 362 ]
+{
+"660
+[; ;../../../usb/src/usb.c: 660:   volatile UEP1bits_t *ep = ((UEP1bits_t*) (&UEP0 + 1 * (i)));
+[v _ep `*VS270 ~T0 @X0 1 a ]
+[e = _ep -> -> + &U _UEP0 * -> * -> 1 `i -> _i `i `x -> -> # *U &U _UEP0 `i `x `*S270 `*VS270 ]
+"661
+[; ;../../../usb/src/usb.c: 661:   ep->EPHSHK = 1;
+[e = . . *U _ep 0 4 -> -> 1 `i `uc ]
+"662
+[; ;../../../usb/src/usb.c: 662:   ep->EPCONDIS = 1;
+[e = . . *U _ep 0 3 -> -> 1 `i `uc ]
+"663
+[; ;../../../usb/src/usb.c: 663:   ep->EPOUTEN = 1;
+[e = . . *U _ep 0 2 -> -> 1 `i `uc ]
+"664
+[; ;../../../usb/src/usb.c: 664:   ep->EPINEN = 1;
+[e = . . *U _ep 0 1 -> -> 1 `i `uc ]
+"665
+[; ;../../../usb/src/usb.c: 665:   ep->EPSTALL = 0;
+[e = . . *U _ep 0 0 -> -> 0 `i `uc ]
+"666
+[; ;../../../usb/src/usb.c: 666:  }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ <= -> _i `i -> 1 `i 362  ]
+[e :U 363 ]
+}
+"669
+[; ;../../../usb/src/usb.c: 669:  UADDR = 0x0;
+[e = _UADDR -> -> 0 `i `uc ]
+"670
+[; ;../../../usb/src/usb.c: 670:  addr_pending = 0;
+[e = _addr_pending -> -> 0 `i `a ]
+"671
+[; ;../../../usb/src/usb.c: 671:  g_configuration = 0;
+[e = _g_configuration -> -> 0 `i `uc ]
+"673
+[; ;../../../usb/src/usb.c: 673:  init_endpoints();
+[e ( _init_endpoints ..  ]
+"683
+[; ;../../../usb/src/usb.c: 683:  reset_ep0_data_stage();
+[e ( _reset_ep0_data_stage ..  ]
+"686
+[; ;../../../usb/src/usb.c: 686:  PIE2bits.USBIE = 1;
+[e = . . _PIE2bits 0 2 -> -> 1 `i `uc ]
+"690
+[; ;../../../usb/src/usb.c: 690: }
+[e :UE 358 ]
+}
+"692
+[; ;../../../usb/src/usb.c: 692: static void reset_bd0_out(void)
+[v _reset_bd0_out `(v ~T0 @X0 1 sf ]
+"693
+[; ;../../../usb/src/usb.c: 693: {
+{
+[e :U _reset_bd0_out ]
+[f ]
+"700
+[; ;../../../usb/src/usb.c: 700:  do { (bds[0]).BDnCNT = (8); (bds[0]).STAT.BDnSTAT = (0x80); } while(0);
+[e :U 368 ]
+{
+[e = . *U + &U _bds * -> -> -> 0 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 -> -> 8 `i `uc ]
+[e = . . *U + &U _bds * -> -> -> 0 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> -> 128 `i `uc ]
+}
+[e :U 367 ]
+"702
+[; ;../../../usb/src/usb.c: 702: }
+[e :UE 365 ]
+}
+"704
+[; ;../../../usb/src/usb.c: 704: static void stall_ep0(void)
+[v _stall_ep0 `(v ~T0 @X0 1 sf ]
+"705
+[; ;../../../usb/src/usb.c: 705: {
+{
+[e :U _stall_ep0 ]
+[f ]
+"712
+[; ;../../../usb/src/usb.c: 712:  do { (bds[1]).BDnCNT = (8); (bds[1]).STAT.BDnSTAT = (0x80|0x04); } while(0);
+[e :U 372 ]
+{
+[e = . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 -> -> 8 `i `uc ]
+[e = . . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> | -> 128 `i -> 4 `i `uc ]
+}
+[e :U 371 ]
+"714
+[; ;../../../usb/src/usb.c: 714: }
+[e :UE 369 ]
+}
+"717
+[; ;../../../usb/src/usb.c: 717: static void clear_ep0_stall(void)
+[v _clear_ep0_stall `(v ~T0 @X0 1 sf ]
+"718
+[; ;../../../usb/src/usb.c: 718: {
+{
+[e :U _clear_ep0_stall ]
+[f ]
+"726
+[; ;../../../usb/src/usb.c: 726:  do { (bds[1]).BDnCNT = (8); (bds[1]).STAT.BDnSTAT = (0); } while(0);
+[e :U 376 ]
+{
+[e = . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 -> -> 8 `i `uc ]
+[e = . . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> -> 0 `i `uc ]
+}
+[e :U 375 ]
+"728
+[; ;../../../usb/src/usb.c: 728: }
+[e :UE 373 ]
+}
+"731
+[; ;../../../usb/src/usb.c: 731: static void stall_ep_in(uint8_t ep)
+[v _stall_ep_in `(v ~T0 @X0 1 sf1`uc ]
+"732
+[; ;../../../usb/src/usb.c: 732: {
+{
+[e :U _stall_ep_in ]
+"731
+[; ;../../../usb/src/usb.c: 731: static void stall_ep_in(uint8_t ep)
+[v _ep `uc ~T0 @X0 1 r1 ]
+"732
+[; ;../../../usb/src/usb.c: 732: {
+[f ]
+"736
+[; ;../../../usb/src/usb.c: 736:  do { (bds[(ep) * 2 + 1]).BDnCNT = (ep_buf[ep].in_len); (bds[(ep) * 2 + 1]).STAT.BDnSTAT = (0x80|0x04); } while(0);
+[e :U 380 ]
+{
+[e = . *U + &U _bds * -> -> + * -> _ep `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 . *U + &U _ep_buf * -> _ep `ux -> -> # *U &U _ep_buf `ui `ux 3 ]
+[e = . . *U + &U _bds * -> -> + * -> _ep `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> | -> 128 `i -> 4 `i `uc ]
+}
+[e :U 379 ]
+"740
+[; ;../../../usb/src/usb.c: 740: }
+[e :UE 377 ]
+}
+"742
+[; ;../../../usb/src/usb.c: 742: static void stall_ep_out(uint8_t ep)
+[v _stall_ep_out `(v ~T0 @X0 1 sf1`uc ]
+"743
+[; ;../../../usb/src/usb.c: 743: {
+{
+[e :U _stall_ep_out ]
+"742
+[; ;../../../usb/src/usb.c: 742: static void stall_ep_out(uint8_t ep)
+[v _ep `uc ~T0 @X0 1 r1 ]
+"743
+[; ;../../../usb/src/usb.c: 743: {
+[f ]
+"747
+[; ;../../../usb/src/usb.c: 747:  do { (bds[(ep) * 2]).BDnCNT = (0); (bds[(ep) * 2]).STAT.BDnSTAT = (0x80|0x04); } while(0);
+[e :U 384 ]
+{
+[e = . *U + &U _bds * -> -> * -> _ep `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 -> -> 0 `i `uc ]
+[e = . . *U + &U _bds * -> -> * -> _ep `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> | -> 128 `i -> 4 `i `uc ]
+}
+[e :U 383 ]
+"751
+[; ;../../../usb/src/usb.c: 751: }
+[e :UE 381 ]
+}
+"753
+[; ;../../../usb/src/usb.c: 753: static void send_zero_length_packet_ep0()
+[v _send_zero_length_packet_ep0 `(v ~T0 @X0 1 sf ]
+"754
+[; ;../../../usb/src/usb.c: 754: {
+{
+[e :U _send_zero_length_packet_ep0 ]
+[f ]
+"761
+[; ;../../../usb/src/usb.c: 761:  bds[1].STAT.BDnSTAT = 0;
+[e = . . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> -> 0 `i `uc ]
+"762
+[; ;../../../usb/src/usb.c: 762:  do { (bds[1]).BDnCNT = (0); (bds[1]).STAT.BDnSTAT = (0x80|0x40|0x08); } while(0);
+[e :U 388 ]
+{
+[e = . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 -> -> 0 `i `uc ]
+[e = . . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> | | -> 128 `i -> 64 `i -> 8 `i `uc ]
+}
+[e :U 387 ]
+"764
+[; ;../../../usb/src/usb.c: 764: }
+[e :UE 385 ]
+}
+"766
+[; ;../../../usb/src/usb.c: 766: static void usb_send_in_buffer_0(size_t len)
+[v _usb_send_in_buffer_0 `(v ~T0 @X0 1 sf1`ui ]
+"767
+[; ;../../../usb/src/usb.c: 767: {
+{
+[e :U _usb_send_in_buffer_0 ]
+"766
+[; ;../../../usb/src/usb.c: 766: static void usb_send_in_buffer_0(size_t len)
+[v _len `ui ~T0 @X0 1 r1 ]
+"767
+[; ;../../../usb/src/usb.c: 767: {
+[f ]
+"768
+[; ;../../../usb/src/usb.c: 768:  if (!usb_in_endpoint_halted(0)) {
+[e $ ! ! != -> ( _usb_in_endpoint_halted (1 -> -> 0 `i `uc `i -> 0 `i 390  ]
+{
+"786
+[; ;../../../usb/src/usb.c: 786:   uint8_t pid;
+[v _pid `uc ~T0 @X0 1 a ]
+"787
+[; ;../../../usb/src/usb.c: 787:   pid = (ep0_buf.flags & 0x8)? 1 : 0;
+[e = _pid -> ? != & -> . _ep0_buf 2 `i -> 8 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
+"788
+[; ;../../../usb/src/usb.c: 788:   bds[1].STAT.BDnSTAT = 0;
+[e = . . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> -> 0 `i `uc ]
+"790
+[; ;../../../usb/src/usb.c: 790:   if (pid)
+[e $ ! != -> _pid `i -> 0 `i 391  ]
+"791
+[; ;../../../usb/src/usb.c: 791:    do { (bds[1]).BDnCNT = (len); (bds[1]).STAT.BDnSTAT = (0x80|0x40|0x08); } while(0);
+[e :U 394 ]
+{
+[e = . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 -> _len `uc ]
+[e = . . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> | | -> 128 `i -> 64 `i -> 8 `i `uc ]
+}
+[e :U 393 ]
+[e $U 395  ]
+"793
+[; ;../../../usb/src/usb.c: 793:   else
+[e :U 391 ]
+"794
+[; ;../../../usb/src/usb.c: 794:    do { (bds[1]).BDnCNT = (len); (bds[1]).STAT.BDnSTAT = (0x80|0x08); } while(0);
+[e :U 398 ]
+{
+[e = . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 -> _len `uc ]
+[e = . . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> | -> 128 `i -> 8 `i `uc ]
+}
+[e :U 397 ]
+[e :U 395 ]
+"797
+[; ;../../../usb/src/usb.c: 797:   ep0_buf.flags ^= 0x8;
+[e =^ . _ep0_buf 2 -> -> 8 `i `uc ]
+"799
+[; ;../../../usb/src/usb.c: 799:  }
+}
+[e :U 390 ]
+"800
+[; ;../../../usb/src/usb.c: 800: }
+[e :UE 389 ]
+}
+"837
+[; ;../../../usb/src/usb.c: 837: static void start_control_return(const void *ptr, size_t len, size_t bytes_asked_for)
+[v _start_control_return `(v ~T0 @X0 1 sf3`*Cv`ui`ui ]
+"838
+[; ;../../../usb/src/usb.c: 838: {
+{
+[e :U _start_control_return ]
+"837
+[; ;../../../usb/src/usb.c: 837: static void start_control_return(const void *ptr, size_t len, size_t bytes_asked_for)
+[v _ptr `*Cv ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+[v _bytes_asked_for `ui ~T0 @X0 1 r3 ]
+"838
+[; ;../../../usb/src/usb.c: 838: {
+[f ]
+"839
+[; ;../../../usb/src/usb.c: 839:  uint8_t bytes_to_send = (((len)<(8))?(len):(8));
+[v _bytes_to_send `uc ~T0 @X0 1 a ]
+[e = _bytes_to_send -> ? < _len -> -> 8 `i `ui : _len -> -> 8 `i `ui `uc ]
+"840
+[; ;../../../usb/src/usb.c: 840:  bytes_to_send = (((bytes_to_send)<(bytes_asked_for))?(bytes_to_send):(bytes_asked_for));
+[e = _bytes_to_send -> ? < -> _bytes_to_send `ui _bytes_asked_for : -> _bytes_to_send `ui _bytes_asked_for `uc ]
+"841
+[; ;../../../usb/src/usb.c: 841:  returning_short = len < bytes_asked_for;
+[e = _returning_short -> -> < _len _bytes_asked_for `i `a ]
+"842
+[; ;../../../usb/src/usb.c: 842:  if (bytes_to_send > 0)
+[e $ ! > -> _bytes_to_send `i -> 0 `i 400  ]
+"843
+[; ;../../../usb/src/usb.c: 843:   memcpy(ep0_buf.in,ptr,bytes_to_send);;
+[e ( _memcpy (3 , , -> . _ep0_buf 1 `*v _ptr -> _bytes_to_send `ui ]
+[e :U 400 ]
+"844
+[; ;../../../usb/src/usb.c: 844:  ep0_data_stage_in_buffer = ((char*)ptr) + bytes_to_send;
+[e = _ep0_data_stage_in_buffer + -> _ptr `*uc * -> -> _bytes_to_send `i `x -> -> # *U -> _ptr `*uc `i `x ]
+"845
+[; ;../../../usb/src/usb.c: 845:  ep0_data_stage_buf_remaining = (((bytes_asked_for)<(len))?(bytes_asked_for):(len)) - bytes_to_send;
+[e = _ep0_data_stage_buf_remaining - ? < _bytes_asked_for _len : _bytes_asked_for _len -> _bytes_to_send `ui ]
+"848
+[; ;../../../usb/src/usb.c: 848:  ep0_buf.flags |= 0x8;
+[e =| . _ep0_buf 2 -> -> 8 `i `uc ]
+"849
+[; ;../../../usb/src/usb.c: 849:  usb_send_in_buffer_0(bytes_to_send);
+[e ( _usb_send_in_buffer_0 (1 -> _bytes_to_send `ui ]
+"850
+[; ;../../../usb/src/usb.c: 850: }
+[e :UE 399 ]
+}
+[v F2753 `(c ~T0 @X0 1 tf ]
+"852
+[; ;../../../usb/src/usb.c: 852: static __attribute__((inline)) int8_t handle_standard_control_request()
+[v _handle_standard_control_request `TF2753 ~T0 @X0 1 s ]
+"853
+[; ;../../../usb/src/usb.c: 853: {
+{
+[e :U _handle_standard_control_request ]
+[f ]
+"854
+[; ;../../../usb/src/usb.c: 854:      struct setup_packet *setup;
+[v _setup `*S312 ~T0 @X0 1 a ]
+"855
+[; ;../../../usb/src/usb.c: 855:  int8_t res = 0;
+[v _res `c ~T0 @X0 1 a ]
+[e = _res -> -> 0 `i `c ]
+"863
+[; ;../../../usb/src/usb.c: 863:  setup = (struct setup_packet*) ep0_buf.out;
+[e = _setup -> . _ep0_buf 0 `*S312 ]
+"866
+[; ;../../../usb/src/usb.c: 866:  if (setup->bRequest == GET_DESCRIPTOR &&
+[e $ ! && == -> . *U _setup 1 `i -> . `E2518 4 `i == -> . . *U _setup 0 1 `i -> 128 `i 402  ]
+"867
+[; ;../../../usb/src/usb.c: 867:      setup->REQUEST.bmRequestType == 0x80 ) {
+{
+"868
+[; ;../../../usb/src/usb.c: 868:   char descriptor = ((setup->wValue >> 8) & 0x00ff);
+[v _descriptor `uc ~T0 @X0 1 a ]
+[e = _descriptor -> & >> -> . *U _setup 2 `ui -> 8 `i -> -> 255 `i `ui `uc ]
+"869
+[; ;../../../usb/src/usb.c: 869:   uint8_t descriptor_index = setup->wValue & 0x00ff;
+[v _descriptor_index `uc ~T0 @X0 1 a ]
+[e = _descriptor_index -> & -> . *U _setup 2 `ui -> -> 255 `i `ui `uc ]
+"871
+[; ;../../../usb/src/usb.c: 871:   if (descriptor == DESC_DEVICE) {
+[e $ ! == -> _descriptor `i -> . `E2530 0 `i 403  ]
+{
+"875
+[; ;../../../usb/src/usb.c: 875:    start_control_return(&this_device_descriptor, this_device_descriptor.bLength, setup->wLength);
+[e ( _start_control_return (3 , , -> &U _this_device_descriptor `*Cv -> . _this_device_descriptor 0 `ui -> . *U _setup 4 `ui ]
+"876
+[; ;../../../usb/src/usb.c: 876:   }
+}
+[e $U 404  ]
+"877
+[; ;../../../usb/src/usb.c: 877:   else if (descriptor == DESC_CONFIGURATION) {
+[e :U 403 ]
+[e $ ! == -> _descriptor `i -> . `E2530 1 `i 405  ]
+{
+"878
+[; ;../../../usb/src/usb.c: 878:    const struct configuration_descriptor *desc;
+[v _desc `*CS311 ~T0 @X0 1 a ]
+"879
+[; ;../../../usb/src/usb.c: 879:    if (descriptor_index >= 1)
+[e $ ! >= -> _descriptor_index `i -> 1 `i 406  ]
+"880
+[; ;../../../usb/src/usb.c: 880:     stall_ep0();
+[e ( _stall_ep0 ..  ]
+[e $U 407  ]
+"881
+[; ;../../../usb/src/usb.c: 881:    else {
+[e :U 406 ]
+{
+"882
+[; ;../../../usb/src/usb.c: 882:     desc = usb_application_config_descs[descriptor_index];
+[e = _desc *U + &U _usb_application_config_descs * -> _descriptor_index `ux -> -> # *U &U _usb_application_config_descs `ui `ux ]
+"883
+[; ;../../../usb/src/usb.c: 883:     start_control_return(desc, desc->wTotalLength, setup->wLength);
+[e ( _start_control_return (3 , , -> _desc `*Cv -> . *U _desc 2 `ui -> . *U _setup 4 `ui ]
+"884
+[; ;../../../usb/src/usb.c: 884:    }
+}
+[e :U 407 ]
+"885
+[; ;../../../usb/src/usb.c: 885:   }
+}
+[e $U 408  ]
+"886
+[; ;../../../usb/src/usb.c: 886:   else if (descriptor == DESC_STRING) {
+[e :U 405 ]
+[e $ ! == -> _descriptor `i -> . `E2530 2 `i 409  ]
+{
+"908
+[; ;../../../usb/src/usb.c: 908:    {
+{
+"910
+[; ;../../../usb/src/usb.c: 910:     const void *desc;
+[v _desc `*Cv ~T0 @X0 1 a ]
+"911
+[; ;../../../usb/src/usb.c: 911:     int16_t len;
+[v _len `s ~T0 @X0 1 a ]
+"912
+[; ;../../../usb/src/usb.c: 912:     {
+{
+"913
+[; ;../../../usb/src/usb.c: 913:      len = usb_application_get_string(descriptor_index, &desc);
+[e = _len ( _usb_application_get_string (2 , _descriptor_index &U _desc ]
+"914
+[; ;../../../usb/src/usb.c: 914:      if (len < 0) {
+[e $ ! < -> _len `i -> 0 `i 410  ]
+{
+"915
+[; ;../../../usb/src/usb.c: 915:       stall_ep0();
+[e ( _stall_ep0 ..  ]
+"917
+[; ;../../../usb/src/usb.c: 917:      }
+}
+[e $U 411  ]
+"918
+[; ;../../../usb/src/usb.c: 918:      else
+[e :U 410 ]
+"919
+[; ;../../../usb/src/usb.c: 919:       start_control_return(desc, len, setup->wLength);
+[e ( _start_control_return (3 , , _desc -> _len `ui -> . *U _setup 4 `ui ]
+[e :U 411 ]
+"920
+[; ;../../../usb/src/usb.c: 920:     }
+}
+"925
+[; ;../../../usb/src/usb.c: 925:    }
+}
+"926
+[; ;../../../usb/src/usb.c: 926:   }
+}
+[e $U 412  ]
+"927
+[; ;../../../usb/src/usb.c: 927:   else {
+[e :U 409 ]
+{
+"929
+[; ;../../../usb/src/usb.c: 929:    int16_t len;
+[v _len `s ~T0 @X0 1 a ]
+"930
+[; ;../../../usb/src/usb.c: 930:    const void *desc;
+[v _desc `*Cv ~T0 @X0 1 a ]
+"931
+[; ;../../../usb/src/usb.c: 931:    len = app_unknown_get_descriptor_callback(setup, &desc);
+[e = _len ( _app_unknown_get_descriptor_callback (2 , -> _setup `*CS312 &U _desc ]
+"932
+[; ;../../../usb/src/usb.c: 932:    if (len < 0) {
+[e $ ! < -> _len `i -> 0 `i 413  ]
+{
+"933
+[; ;../../../usb/src/usb.c: 933:     stall_ep0();
+[e ( _stall_ep0 ..  ]
+"935
+[; ;../../../usb/src/usb.c: 935:    }
+}
+[e $U 414  ]
+"936
+[; ;../../../usb/src/usb.c: 936:    else
+[e :U 413 ]
+"937
+[; ;../../../usb/src/usb.c: 937:     start_control_return(desc, len, setup->wLength);
+[e ( _start_control_return (3 , , _desc -> _len `ui -> . *U _setup 4 `ui ]
+[e :U 414 ]
+"944
+[; ;../../../usb/src/usb.c: 944:   }
+}
+[e :U 412 ]
+[e :U 408 ]
+[e :U 404 ]
+"945
+[; ;../../../usb/src/usb.c: 945:  }
+}
+[e $U 415  ]
+"946
+[; ;../../../usb/src/usb.c: 946:  else if (setup->bRequest == SET_ADDRESS) {
+[e :U 402 ]
+[e $ ! == -> . *U _setup 1 `i -> . `E2518 3 `i 416  ]
+{
+"949
+[; ;../../../usb/src/usb.c: 949:   addr_pending = 1;
+[e = _addr_pending -> -> 1 `i `a ]
+"950
+[; ;../../../usb/src/usb.c: 950:   addr = setup->wValue;
+[e = _addr -> . *U _setup 2 `uc ]
+"952
+[; ;../../../usb/src/usb.c: 952:   send_zero_length_packet_ep0();
+[e ( _send_zero_length_packet_ep0 ..  ]
+"953
+[; ;../../../usb/src/usb.c: 953:  }
+}
+[e $U 417  ]
+"954
+[; ;../../../usb/src/usb.c: 954:  else if (setup->bRequest == SET_CONFIGURATION) {
+[e :U 416 ]
+[e $ ! == -> . *U _setup 1 `i -> . `E2518 7 `i 418  ]
+{
+"958
+[; ;../../../usb/src/usb.c: 958:   uint8_t req = setup->wValue & 0x00ff;
+[v _req `uc ~T0 @X0 1 a ]
+[e = _req -> & -> . *U _setup 2 `ui -> -> 255 `i `ui `uc ]
+"960
+[; ;../../../usb/src/usb.c: 960:   app_set_configuration_callback(req);
+[e ( _app_set_configuration_callback (1 _req ]
+"967
+[; ;../../../usb/src/usb.c: 967:   init_endpoints();
+[e ( _init_endpoints ..  ]
+"969
+[; ;../../../usb/src/usb.c: 969:   send_zero_length_packet_ep0();
+[e ( _send_zero_length_packet_ep0 ..  ]
+"970
+[; ;../../../usb/src/usb.c: 970:   g_configuration = req;
+[e = _g_configuration _req ]
+"974
+[; ;../../../usb/src/usb.c: 974:  }
+}
+[e $U 419  ]
+"975
+[; ;../../../usb/src/usb.c: 975:  else if (setup->bRequest == GET_CONFIGURATION) {
+[e :U 418 ]
+[e $ ! == -> . *U _setup 1 `i -> . `E2518 6 `i 420  ]
+{
+"980
+[; ;../../../usb/src/usb.c: 980:   start_control_return(&g_configuration, 1, setup->wLength);
+[e ( _start_control_return (3 , , -> &U _g_configuration `*Cv -> -> 1 `i `ui -> . *U _setup 4 `ui ]
+"981
+[; ;../../../usb/src/usb.c: 981:  }
+}
+[e $U 421  ]
+"982
+[; ;../../../usb/src/usb.c: 982:  else if (setup->bRequest == GET_STATUS) {
+[e :U 420 ]
+[e $ ! == -> . *U _setup 1 `i -> . `E2518 0 `i 422  ]
+{
+"988
+[; ;../../../usb/src/usb.c: 988:   if (setup->REQUEST.destination == 0 ) {
+[e $ ! == -> . . . *U _setup 0 0 0 `i -> 0 `i 423  ]
+{
+"991
+[; ;../../../usb/src/usb.c: 991:    uint16_t ret;
+[v _ret `us ~T0 @X0 1 a ]
+"993
+[; ;../../../usb/src/usb.c: 993:    ret = app_get_device_status_callback();
+[e = _ret ( _app_get_device_status_callback ..  ]
+"997
+[; ;../../../usb/src/usb.c: 997:    start_control_return(&ret, 2, setup->wLength);
+[e ( _start_control_return (3 , , -> &U _ret `*Cv -> -> 2 `i `ui -> . *U _setup 4 `ui ]
+"998
+[; ;../../../usb/src/usb.c: 998:   }
+}
+[e $U 424  ]
+"999
+[; ;../../../usb/src/usb.c: 999:   else if (setup->REQUEST.destination == 2 ) {
+[e :U 423 ]
+[e $ ! == -> . . . *U _setup 0 0 0 `i -> 2 `i 425  ]
+{
+"1001
+[; ;../../../usb/src/usb.c: 1001:    uint8_t ep_num = setup->wIndex & 0x0f;
+[v _ep_num `uc ~T0 @X0 1 a ]
+[e = _ep_num -> & -> . *U _setup 3 `ui -> -> 15 `i `ui `uc ]
+"1002
+[; ;../../../usb/src/usb.c: 1002:    if (ep_num <= 1) {
+[e $ ! <= -> _ep_num `i -> 1 `i 426  ]
+{
+"1003
+[; ;../../../usb/src/usb.c: 1003:     uint8_t flags = ep_buf[ep_num].flags;
+[v _flags `uc ~T0 @X0 1 a ]
+[e = _flags . *U + &U _ep_buf * -> _ep_num `ux -> -> # *U &U _ep_buf `ui `ux 4 ]
+"1004
+[; ;../../../usb/src/usb.c: 1004:     uint8_t ret[2];
+[v _ret `uc ~T0 @X0 -> 2 `i a ]
+"1005
+[; ;../../../usb/src/usb.c: 1005:     ret[0] = ((setup->wIndex & 0x80) ?
+[e = *U + &U _ret * -> -> -> 0 `i `ui `ux -> -> # *U &U _ret `ui `ux -> -> != ? != & -> . *U _setup 3 `ui -> -> 128 `i `ui -> -> 0 `i `ui : & -> _flags `i -> 2 `i & -> _flags `i -> 1 `i -> 0 `i `i `uc ]
+"1008
+[; ;../../../usb/src/usb.c: 1008:     ret[1] = 0;
+[e = *U + &U _ret * -> -> -> 1 `i `ui `ux -> -> # *U &U _ret `ui `ux -> -> 0 `i `uc ]
+"1009
+[; ;../../../usb/src/usb.c: 1009:     start_control_return(ret, 2, setup->wLength);
+[e ( _start_control_return (3 , , -> &U _ret `*Cv -> -> 2 `i `ui -> . *U _setup 4 `ui ]
+"1010
+[; ;../../../usb/src/usb.c: 1010:    }
+}
+[e $U 427  ]
+"1011
+[; ;../../../usb/src/usb.c: 1011:    else {
+[e :U 426 ]
+{
+"1013
+[; ;../../../usb/src/usb.c: 1013:     stall_ep0();
+[e ( _stall_ep0 ..  ]
+"1014
+[; ;../../../usb/src/usb.c: 1014:    }
+}
+[e :U 427 ]
+"1015
+[; ;../../../usb/src/usb.c: 1015:   }
+}
+[e $U 428  ]
+"1016
+[; ;../../../usb/src/usb.c: 1016:   else {
+[e :U 425 ]
+{
+"1017
+[; ;../../../usb/src/usb.c: 1017:    stall_ep0();
+[e ( _stall_ep0 ..  ]
+"1020
+[; ;../../../usb/src/usb.c: 1020:   }
+}
+[e :U 428 ]
+[e :U 424 ]
+"1022
+[; ;../../../usb/src/usb.c: 1022:  }
+}
+[e $U 429  ]
+"1023
+[; ;../../../usb/src/usb.c: 1023:  else if (setup->bRequest == SET_INTERFACE) {
+[e :U 422 ]
+[e $ ! == -> . *U _setup 1 `i -> . `E2518 9 `i 430  ]
+{
+"1028
+[; ;../../../usb/src/usb.c: 1028:   int8_t res;
+[v _res `c ~T0 @X0 1 a ]
+"1029
+[; ;../../../usb/src/usb.c: 1029:   res = app_set_interface_callback(setup->wIndex, setup->wValue);
+[e = _res ( _app_set_interface_callback (2 , -> . *U _setup 3 `uc -> . *U _setup 2 `uc ]
+"1030
+[; ;../../../usb/src/usb.c: 1030:   if (res < 0) {
+[e $ ! < -> _res `i -> 0 `i 431  ]
+{
+"1031
+[; ;../../../usb/src/usb.c: 1031:    stall_ep0();
+[e ( _stall_ep0 ..  ]
+"1032
+[; ;../../../usb/src/usb.c: 1032:   }
+}
+[e $U 432  ]
+"1033
+[; ;../../../usb/src/usb.c: 1033:   else
+[e :U 431 ]
+"1034
+[; ;../../../usb/src/usb.c: 1034:    send_zero_length_packet_ep0();
+[e ( _send_zero_length_packet_ep0 ..  ]
+[e :U 432 ]
+"1041
+[; ;../../../usb/src/usb.c: 1041:  }
+}
+[e $U 433  ]
+"1042
+[; ;../../../usb/src/usb.c: 1042:  else if (setup->bRequest == GET_INTERFACE) {
+[e :U 430 ]
+[e $ ! == -> . *U _setup 1 `i -> . `E2518 8 `i 434  ]
+{
+"1043
+[; ;../../../usb/src/usb.c: 1043:   int8_t ret;
+[v _ret `c ~T0 @X0 1 a ]
+"1050
+[; ;../../../usb/src/usb.c: 1050:   ret = app_get_interface_callback(setup->wIndex);
+[e = _ret ( _app_get_interface_callback (1 -> . *U _setup 3 `uc ]
+"1051
+[; ;../../../usb/src/usb.c: 1051:   if (ret < 0)
+[e $ ! < -> _ret `i -> 0 `i 435  ]
+"1052
+[; ;../../../usb/src/usb.c: 1052:    stall_ep0();
+[e ( _stall_ep0 ..  ]
+[e $U 436  ]
+"1053
+[; ;../../../usb/src/usb.c: 1053:   else {
+[e :U 435 ]
+{
+"1056
+[; ;../../../usb/src/usb.c: 1056:    start_control_return(&ret, 1, setup->wLength);
+[e ( _start_control_return (3 , , -> &U _ret `*Cv -> -> 1 `i `ui -> . *U _setup 4 `ui ]
+"1057
+[; ;../../../usb/src/usb.c: 1057:   }
+}
+[e :U 436 ]
+"1066
+[; ;../../../usb/src/usb.c: 1066:  }
+}
+[e $U 437  ]
+"1067
+[; ;../../../usb/src/usb.c: 1067:  else if (setup->bRequest == CLEAR_FEATURE || setup->bRequest == SET_FEATURE) {
+[e :U 434 ]
+[e $ ! || == -> . *U _setup 1 `i -> . `E2518 1 `i == -> . *U _setup 1 `i -> . `E2518 2 `i 438  ]
+{
+"1068
+[; ;../../../usb/src/usb.c: 1068:   uint8_t stall = 1;
+[v _stall `uc ~T0 @X0 1 a ]
+[e = _stall -> -> 1 `i `uc ]
+"1069
+[; ;../../../usb/src/usb.c: 1069:   if (setup->REQUEST.destination == 0 ) {
+[e $ ! == -> . . . *U _setup 0 0 0 `i -> 0 `i 439  ]
+{
+"1072
+[; ;../../../usb/src/usb.c: 1072:   }
+}
+[e :U 439 ]
+"1074
+[; ;../../../usb/src/usb.c: 1074:   if (setup->REQUEST.destination == 2 ) {
+[e $ ! == -> . . . *U _setup 0 0 0 `i -> 2 `i 440  ]
+{
+"1075
+[; ;../../../usb/src/usb.c: 1075:    if (setup->wValue == 0 ) {
+[e $ ! == -> . *U _setup 2 `ui -> -> 0 `i `ui 441  ]
+{
+"1076
+[; ;../../../usb/src/usb.c: 1076:     uint8_t ep_num = setup->wIndex & 0x0f;
+[v _ep_num `uc ~T0 @X0 1 a ]
+[e = _ep_num -> & -> . *U _setup 3 `ui -> -> 15 `i `ui `uc ]
+"1077
+[; ;../../../usb/src/usb.c: 1077:     uint8_t ep_dir = setup->wIndex & 0x80;
+[v _ep_dir `uc ~T0 @X0 1 a ]
+[e = _ep_dir -> & -> . *U _setup 3 `ui -> -> 128 `i `ui `uc ]
+"1078
+[; ;../../../usb/src/usb.c: 1078:     if (ep_num <= 1) {
+[e $ ! <= -> _ep_num `i -> 1 `i 442  ]
+{
+"1079
+[; ;../../../usb/src/usb.c: 1079:      if (setup->bRequest == SET_FEATURE) {
+[e $ ! == -> . *U _setup 1 `i -> . `E2518 2 `i 443  ]
+{
+"1082
+[; ;../../../usb/src/usb.c: 1082:       if (ep_dir) {
+[e $ ! != -> _ep_dir `i -> 0 `i 444  ]
+{
+"1083
+[; ;../../../usb/src/usb.c: 1083:        usb_halt_ep_in(ep_num);
+[e ( _usb_halt_ep_in (1 _ep_num ]
+"1084
+[; ;../../../usb/src/usb.c: 1084:       }
+}
+[e $U 445  ]
+"1085
+[; ;../../../usb/src/usb.c: 1085:       else {
+[e :U 444 ]
+{
+"1086
+[; ;../../../usb/src/usb.c: 1086:        usb_halt_ep_out(ep_num);
+[e ( _usb_halt_ep_out (1 _ep_num ]
+"1087
+[; ;../../../usb/src/usb.c: 1087:       }
+}
+[e :U 445 ]
+"1088
+[; ;../../../usb/src/usb.c: 1088:      }
+}
+[e $U 446  ]
+"1089
+[; ;../../../usb/src/usb.c: 1089:      else {
+[e :U 443 ]
+{
+"1092
+[; ;../../../usb/src/usb.c: 1092:       if (ep_dir) {
+[e $ ! != -> _ep_dir `i -> 0 `i 447  ]
+{
+"1097
+[; ;../../../usb/src/usb.c: 1097:        do { (bds[(ep_num) * 2 + 1]).BDnCNT = (ep_buf[ep_num].in_len); (bds[(ep_num) * 2 + 1]).STAT.BDnSTAT = (0); } while(0);
+[e :U 450 ]
+{
+[e = . *U + &U _bds * -> -> + * -> _ep_num `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 . *U + &U _ep_buf * -> _ep_num `ux -> -> # *U &U _ep_buf `ui `ux 3 ]
+[e = . . *U + &U _bds * -> -> + * -> _ep_num `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> -> 0 `i `uc ]
+}
+[e :U 449 ]
+"1100
+[; ;../../../usb/src/usb.c: 1100:        ep_buf[ep_num].flags &= ~0x8;
+[e =& . *U + &U _ep_buf * -> _ep_num `ux -> -> # *U &U _ep_buf `ui `ux 4 -> ~ -> 8 `i `uc ]
+"1102
+[; ;../../../usb/src/usb.c: 1102:        ep_buf[ep_num].flags &= ~(0x2);
+[e =& . *U + &U _ep_buf * -> _ep_num `ux -> -> # *U &U _ep_buf `ui `ux 4 -> ~ -> 2 `i `uc ]
+"1103
+[; ;../../../usb/src/usb.c: 1103:       }
+}
+[e $U 451  ]
+"1104
+[; ;../../../usb/src/usb.c: 1104:       else {
+[e :U 447 ]
+{
+"1114
+[; ;../../../usb/src/usb.c: 1114:        do { (bds[(ep_num) * 2]).BDnCNT = (ep_buf[ep_num].out_len); (bds[(ep_num) * 2]).STAT.BDnSTAT = (0x80|0x08); } while(0);
+[e :U 454 ]
+{
+[e = . *U + &U _bds * -> -> * -> _ep_num `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 . *U + &U _ep_buf * -> _ep_num `ux -> -> # *U &U _ep_buf `ui `ux 2 ]
+[e = . . *U + &U _bds * -> -> * -> _ep_num `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> | -> 128 `i -> 8 `i `uc ]
+}
+[e :U 453 ]
+"1117
+[; ;../../../usb/src/usb.c: 1117:        ep_buf[ep_num].flags |= 0x4;
+[e =| . *U + &U _ep_buf * -> _ep_num `ux -> -> # *U &U _ep_buf `ui `ux 4 -> -> 4 `i `uc ]
+"1119
+[; ;../../../usb/src/usb.c: 1119:        ep_buf[ep_num].flags &= ~(0x1);
+[e =& . *U + &U _ep_buf * -> _ep_num `ux -> -> # *U &U _ep_buf `ui `ux 4 -> ~ -> 1 `i `uc ]
+"1120
+[; ;../../../usb/src/usb.c: 1120:       }
+}
+[e :U 451 ]
+"1121
+[; ;../../../usb/src/usb.c: 1121:      }
+}
+[e :U 446 ]
+"1123
+[; ;../../../usb/src/usb.c: 1123:      app_endpoint_halt_callback(setup->wIndex, (setup->bRequest == SET_FEATURE));
+[e ( _app_endpoint_halt_callback (2 , -> . *U _setup 3 `uc -> -> == -> . *U _setup 1 `i -> . `E2518 2 `i `i `a ]
+"1125
+[; ;../../../usb/src/usb.c: 1125:      stall = 0;
+[e = _stall -> -> 0 `i `uc ]
+"1126
+[; ;../../../usb/src/usb.c: 1126:     }
+}
+[e :U 442 ]
+"1127
+[; ;../../../usb/src/usb.c: 1127:    }
+}
+[e :U 441 ]
+"1128
+[; ;../../../usb/src/usb.c: 1128:   }
+}
+[e :U 440 ]
+"1130
+[; ;../../../usb/src/usb.c: 1130:   if (!stall) {
+[e $ ! ! != -> _stall `i -> 0 `i 455  ]
+{
+"1131
+[; ;../../../usb/src/usb.c: 1131:    send_zero_length_packet_ep0();
+[e ( _send_zero_length_packet_ep0 ..  ]
+"1132
+[; ;../../../usb/src/usb.c: 1132:   }
+}
+[e $U 456  ]
+"1133
+[; ;../../../usb/src/usb.c: 1133:   else
+[e :U 455 ]
+"1134
+[; ;../../../usb/src/usb.c: 1134:    stall_ep0();
+[e ( _stall_ep0 ..  ]
+[e :U 456 ]
+"1135
+[; ;../../../usb/src/usb.c: 1135:  }
+}
+[e $U 457  ]
+"1136
+[; ;../../../usb/src/usb.c: 1136:  else {
+[e :U 438 ]
+{
+"1137
+[; ;../../../usb/src/usb.c: 1137:   res = -1;
+[e = _res -> -U -> 1 `i `c ]
+"1144
+[; ;../../../usb/src/usb.c: 1144:  }
+}
+[e :U 457 ]
+[e :U 437 ]
+[e :U 433 ]
+[e :U 429 ]
+[e :U 421 ]
+[e :U 419 ]
+[e :U 417 ]
+[e :U 415 ]
+"1146
+[; ;../../../usb/src/usb.c: 1146:  return res;
+[e ) _res ]
+[e $UE 401  ]
+"1147
+[; ;../../../usb/src/usb.c: 1147: }
+[e :UE 401 ]
+}
+[v F2775 `(v ~T0 @X0 1 tf ]
+"1149
+[; ;../../../usb/src/usb.c: 1149: static __attribute__((inline)) void handle_ep0_setup()
+[v _handle_ep0_setup `TF2775 ~T0 @X0 1 s ]
+"1150
+[; ;../../../usb/src/usb.c: 1150: {
+{
+[e :U _handle_ep0_setup ]
+[f ]
+"1151
+[; ;../../../usb/src/usb.c: 1151:      struct setup_packet *setup;
+[v _setup `*S312 ~T0 @X0 1 a ]
+"1158
+[; ;../../../usb/src/usb.c: 1158:  setup = (struct setup_packet*) ep0_buf.out;
+[e = _setup -> . _ep0_buf 0 `*S312 ]
+"1161
+[; ;../../../usb/src/usb.c: 1161:  ep0_data_stage_direc = setup->REQUEST.direction;
+[e = _ep0_data_stage_direc . . . *U _setup 0 0 2 ]
+"1162
+[; ;../../../usb/src/usb.c: 1162:  int8_t res;
+[v _res `c ~T0 @X0 1 a ]
+"1168
+[; ;../../../usb/src/usb.c: 1168:  clear_ep0_stall();
+[e ( _clear_ep0_stall ..  ]
+"1189
+[; ;../../../usb/src/usb.c: 1189:  if (bds[1].STAT.UOWN) {
+[e $ ! != -> . . . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 0 4 `i -> 0 `i 459  ]
+{
+"1190
+[; ;../../../usb/src/usb.c: 1190:   do { (bds[1]).BDnCNT = (8); (bds[1]).STAT.BDnSTAT = (0); } while(0);
+[e :U 462 ]
+{
+[e = . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 -> -> 8 `i `uc ]
+[e = . . *U + &U _bds * -> -> -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> -> 0 `i `uc ]
+}
+[e :U 461 ]
+"1191
+[; ;../../../usb/src/usb.c: 1191:  }
+}
+[e :U 459 ]
+"1194
+[; ;../../../usb/src/usb.c: 1194:  if (ep0_data_stage_buf_remaining) {
+[e $ ! != _ep0_data_stage_buf_remaining -> -> 0 `i `ui 463  ]
+{
+"1199
+[; ;../../../usb/src/usb.c: 1199:   if (ep0_data_stage_callback)
+[e $ ! != _ep0_data_stage_callback -> -> 0 `i `*F2779 464  ]
+"1200
+[; ;../../../usb/src/usb.c: 1200:    ep0_data_stage_callback(0 , ep0_data_stage_context);
+[e ( *U _ep0_data_stage_callback (2 , -> -> 0 `i `a _ep0_data_stage_context ]
+[e :U 464 ]
+"1202
+[; ;../../../usb/src/usb.c: 1202:   reset_ep0_data_stage();
+[e ( _reset_ep0_data_stage ..  ]
+"1203
+[; ;../../../usb/src/usb.c: 1203:  }
+}
+[e :U 463 ]
+"1205
+[; ;../../../usb/src/usb.c: 1205:  if (setup->REQUEST.type == REQUEST_TYPE_STANDARD) {
+[e $ ! == -> . . . *U _setup 0 0 1 `i -> . `E2513 0 `i 465  ]
+{
+"1206
+[; ;../../../usb/src/usb.c: 1206:   res = handle_standard_control_request();
+[e = _res ( _handle_standard_control_request ..  ]
+"1207
+[; ;../../../usb/src/usb.c: 1207:   if (res < 0)
+[e $ ! < -> _res `i -> 0 `i 466  ]
+"1208
+[; ;../../../usb/src/usb.c: 1208:    goto handle_unknown;
+[e $U 467  ]
+[e :U 466 ]
+"1209
+[; ;../../../usb/src/usb.c: 1209:  }
+}
+[e $U 468  ]
+"1234
+[; ;../../../usb/src/usb.c: 1234:  else
+[e :U 465 ]
+"1235
+[; ;../../../usb/src/usb.c: 1235:   goto handle_unknown;
+[e $U 467  ]
+[e :U 468 ]
+"1237
+[; ;../../../usb/src/usb.c: 1237:  goto out;
+[e $U 469  ]
+"1239
+[; ;../../../usb/src/usb.c: 1239: handle_unknown:
+[e :U 467 ]
+"1242
+[; ;../../../usb/src/usb.c: 1242:  res = app_unknown_setup_request_callback(setup);
+[e = _res ( _app_unknown_setup_request_callback (1 -> _setup `*CS312 ]
+"1243
+[; ;../../../usb/src/usb.c: 1243:  if (res < 0)
+[e $ ! < -> _res `i -> 0 `i 470  ]
+"1244
+[; ;../../../usb/src/usb.c: 1244:   stall_ep0();
+[e ( _stall_ep0 ..  ]
+[e $U 471  ]
+"1245
+[; ;../../../usb/src/usb.c: 1245:  else {
+[e :U 470 ]
+{
+"1249
+[; ;../../../usb/src/usb.c: 1249:  }
+}
+[e :U 471 ]
+"1255
+[; ;../../../usb/src/usb.c: 1255: out:
+[e :U 469 ]
+"1260
+[; ;../../../usb/src/usb.c: 1260:  UCONbits.PKTDIS = 0;
+[e = . . _UCONbits 0 4 -> -> 0 `i `uc ]
+"1261
+[; ;../../../usb/src/usb.c: 1261: }
+[e :UE 458 ]
+}
+[v F2783 `(v ~T0 @X0 1 tf ]
+"1263
+[; ;../../../usb/src/usb.c: 1263: static __attribute__((inline)) void handle_ep0_out()
+[v _handle_ep0_out `TF2783 ~T0 @X0 1 s ]
+"1264
+[; ;../../../usb/src/usb.c: 1264: {
+{
+[e :U _handle_ep0_out ]
+[f ]
+"1268
+[; ;../../../usb/src/usb.c: 1268:  uint8_t pkt_len = (bds[0].BDnCNT);
+[v _pkt_len `uc ~T0 @X0 1 a ]
+[e = _pkt_len . *U + &U _bds * -> -> -> 0 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 ]
+"1270
+[; ;../../../usb/src/usb.c: 1270:  if (ep0_data_stage_direc == 1 ) {
+[e $ ! == -> _ep0_data_stage_direc `i -> 1 `i 473  ]
+{
+"1276
+[; ;../../../usb/src/usb.c: 1276:   if (ep0_data_stage_callback)
+[e $ ! != _ep0_data_stage_callback -> -> 0 `i `*F2785 474  ]
+"1277
+[; ;../../../usb/src/usb.c: 1277:    ep0_data_stage_callback(1 , ep0_data_stage_context);
+[e ( *U _ep0_data_stage_callback (2 , -> -> 1 `i `a _ep0_data_stage_context ]
+[e :U 474 ]
+"1278
+[; ;../../../usb/src/usb.c: 1278:   reset_ep0_data_stage();
+[e ( _reset_ep0_data_stage ..  ]
+"1279
+[; ;../../../usb/src/usb.c: 1279:  }
+}
+[e $U 475  ]
+"1280
+[; ;../../../usb/src/usb.c: 1280:  else {
+[e :U 473 ]
+{
+"1288
+[; ;../../../usb/src/usb.c: 1288:   if (ep0_data_stage_out_buffer) {
+[e $ ! != _ep0_data_stage_out_buffer -> -> 0 `i `*uc 476  ]
+{
+"1289
+[; ;../../../usb/src/usb.c: 1289:    uint8_t bytes_to_copy = (((pkt_len)<(ep0_data_stage_buf_remaining))?(pkt_len):(ep0_data_stage_buf_remaining));
+[v _bytes_to_copy `uc ~T0 @X0 1 a ]
+[e = _bytes_to_copy -> ? < -> _pkt_len `ui _ep0_data_stage_buf_remaining : -> _pkt_len `ui _ep0_data_stage_buf_remaining `uc ]
+"1296
+[; ;../../../usb/src/usb.c: 1296:    memcpy(ep0_data_stage_out_buffer, ep0_buf.out, bytes_to_copy);
+[e ( _memcpy (3 , , -> _ep0_data_stage_out_buffer `*v -> . _ep0_buf 0 `*Cv -> _bytes_to_copy `ui ]
+"1298
+[; ;../../../usb/src/usb.c: 1298:    ep0_data_stage_out_buffer += bytes_to_copy;
+[e =+ _ep0_data_stage_out_buffer * -> -> _bytes_to_copy `i `x -> -> # *U _ep0_data_stage_out_buffer `i `x ]
+"1299
+[; ;../../../usb/src/usb.c: 1299:    ep0_data_stage_buf_remaining -= bytes_to_copy;
+[e =- _ep0_data_stage_buf_remaining -> _bytes_to_copy `ui ]
+"1304
+[; ;../../../usb/src/usb.c: 1304:    if (pkt_len < 8 || ep0_data_stage_buf_remaining == 0) {
+[e $ ! || < -> _pkt_len `i -> 8 `i == _ep0_data_stage_buf_remaining -> -> 0 `i `ui 477  ]
+{
+"1309
+[; ;../../../usb/src/usb.c: 1309:     if (bytes_to_copy < pkt_len) {
+[e $ ! < -> _bytes_to_copy `i -> _pkt_len `i 478  ]
+{
+"1311
+[; ;../../../usb/src/usb.c: 1311:      stall_ep0();
+[e ( _stall_ep0 ..  ]
+"1312
+[; ;../../../usb/src/usb.c: 1312:      if (ep0_data_stage_callback)
+[e $ ! != _ep0_data_stage_callback -> -> 0 `i `*F2790 479  ]
+"1313
+[; ;../../../usb/src/usb.c: 1313:       ep0_data_stage_callback(0 , ep0_data_stage_context);
+[e ( *U _ep0_data_stage_callback (2 , -> -> 0 `i `a _ep0_data_stage_context ]
+[e :U 479 ]
+"1314
+[; ;../../../usb/src/usb.c: 1314:      reset_ep0_data_stage();
+[e ( _reset_ep0_data_stage ..  ]
+"1315
+[; ;../../../usb/src/usb.c: 1315:     }
+}
+[e $U 480  ]
+"1316
+[; ;../../../usb/src/usb.c: 1316:     else {
+[e :U 478 ]
+{
+"1318
+[; ;../../../usb/src/usb.c: 1318:      send_zero_length_packet_ep0();
+[e ( _send_zero_length_packet_ep0 ..  ]
+"1319
+[; ;../../../usb/src/usb.c: 1319:     }
+}
+[e :U 480 ]
+"1320
+[; ;../../../usb/src/usb.c: 1320:    }
+}
+[e :U 477 ]
+"1321
+[; ;../../../usb/src/usb.c: 1321:   }
+}
+[e :U 476 ]
+"1322
+[; ;../../../usb/src/usb.c: 1322:  }
+}
+[e :U 475 ]
+"1323
+[; ;../../../usb/src/usb.c: 1323: }
+[e :UE 472 ]
+}
+[v F2794 `(v ~T0 @X0 1 tf ]
+"1325
+[; ;../../../usb/src/usb.c: 1325: static __attribute__((inline)) void handle_ep0_in()
+[v _handle_ep0_in `TF2794 ~T0 @X0 1 s ]
+"1326
+[; ;../../../usb/src/usb.c: 1326: {
+{
+[e :U _handle_ep0_in ]
+[f ]
+"1327
+[; ;../../../usb/src/usb.c: 1327:  if (addr_pending) {
+[e $ ! != -> _addr_pending `i -> 0 `i 482  ]
+{
+"1328
+[; ;../../../usb/src/usb.c: 1328:   UADDR = addr;
+[e = _UADDR _addr ]
+"1329
+[; ;../../../usb/src/usb.c: 1329:   addr_pending = 0;
+[e = _addr_pending -> -> 0 `i `a ]
+"1330
+[; ;../../../usb/src/usb.c: 1330:  }
+}
+[e :U 482 ]
+"1332
+[; ;../../../usb/src/usb.c: 1332:  if (ep0_data_stage_buf_remaining) {
+[e $ ! != _ep0_data_stage_buf_remaining -> -> 0 `i `ui 483  ]
+{
+"1334
+[; ;../../../usb/src/usb.c: 1334:   uint8_t bytes_to_send = (((ep0_data_stage_buf_remaining)<(8))?(ep0_data_stage_buf_remaining):(8));
+[v _bytes_to_send `uc ~T0 @X0 1 a ]
+[e = _bytes_to_send -> ? < _ep0_data_stage_buf_remaining -> -> 8 `i `ui : _ep0_data_stage_buf_remaining -> -> 8 `i `ui `uc ]
+"1336
+[; ;../../../usb/src/usb.c: 1336:   memcpy(ep0_buf.in,ep0_data_stage_in_buffer,bytes_to_send);;
+[e ( _memcpy (3 , , -> . _ep0_buf 1 `*v -> _ep0_data_stage_in_buffer `*Cv -> _bytes_to_send `ui ]
+"1337
+[; ;../../../usb/src/usb.c: 1337:   ep0_data_stage_buf_remaining -= bytes_to_send;
+[e =- _ep0_data_stage_buf_remaining -> _bytes_to_send `ui ]
+"1338
+[; ;../../../usb/src/usb.c: 1338:   ep0_data_stage_in_buffer += bytes_to_send;
+[e =+ _ep0_data_stage_in_buffer * -> -> _bytes_to_send `i `x -> -> # *U _ep0_data_stage_in_buffer `i `x ]
+"1343
+[; ;../../../usb/src/usb.c: 1343:   if (ep0_data_stage_buf_remaining == 0 &&
+[e $ ! && && == _ep0_data_stage_buf_remaining -> -> 0 `i `ui == -> _bytes_to_send `i -> 8 `i != -> _returning_short `i -> 0 `i 484  ]
+"1346
+[; ;../../../usb/src/usb.c: 1346:    control_need_zlp = 1;
+[e = _control_need_zlp -> -> 1 `i `a ]
+[e :U 484 ]
+"1348
+[; ;../../../usb/src/usb.c: 1348:   usb_send_in_buffer_0(bytes_to_send);
+[e ( _usb_send_in_buffer_0 (1 -> _bytes_to_send `ui ]
+"1349
+[; ;../../../usb/src/usb.c: 1349:  }
+}
+[e $U 485  ]
+"1350
+[; ;../../../usb/src/usb.c: 1350:  else if (control_need_zlp) {
+[e :U 483 ]
+[e $ ! != -> _control_need_zlp `i -> 0 `i 486  ]
+{
+"1351
+[; ;../../../usb/src/usb.c: 1351:   usb_send_in_buffer_0(0);
+[e ( _usb_send_in_buffer_0 (1 -> -> 0 `i `ui ]
+"1352
+[; ;../../../usb/src/usb.c: 1352:   control_need_zlp = 0;
+[e = _control_need_zlp -> -> 0 `i `a ]
+"1353
+[; ;../../../usb/src/usb.c: 1353:   reset_ep0_data_stage();
+[e ( _reset_ep0_data_stage ..  ]
+"1354
+[; ;../../../usb/src/usb.c: 1354:  }
+}
+[e $U 487  ]
+"1355
+[; ;../../../usb/src/usb.c: 1355:  else {
+[e :U 486 ]
+{
+"1356
+[; ;../../../usb/src/usb.c: 1356:   if (ep0_data_stage_direc == 0 ) {
+[e $ ! == -> _ep0_data_stage_direc `i -> 0 `i 488  ]
+{
+"1361
+[; ;../../../usb/src/usb.c: 1361:    if (ep0_data_stage_callback)
+[e $ ! != _ep0_data_stage_callback -> -> 0 `i `*F2797 489  ]
+"1362
+[; ;../../../usb/src/usb.c: 1362:     ep0_data_stage_callback(1 , ep0_data_stage_context);
+[e ( *U _ep0_data_stage_callback (2 , -> -> 1 `i `a _ep0_data_stage_context ]
+[e :U 489 ]
+"1363
+[; ;../../../usb/src/usb.c: 1363:    reset_ep0_data_stage();
+[e ( _reset_ep0_data_stage ..  ]
+"1364
+[; ;../../../usb/src/usb.c: 1364:   }
+}
+[e :U 488 ]
+"1365
+[; ;../../../usb/src/usb.c: 1365:  }
+}
+[e :U 487 ]
+[e :U 485 ]
+"1366
+[; ;../../../usb/src/usb.c: 1366: }
+[e :UE 481 ]
+}
+"1370
+[; ;../../../usb/src/usb.c: 1370: void usb_service(void)
+[v _usb_service `(v ~T0 @X0 1 ef ]
+"1371
+[; ;../../../usb/src/usb.c: 1371: {
+{
+[e :U _usb_service ]
+[f ]
+"1372
+[; ;../../../usb/src/usb.c: 1372:  if (UIRbits.URSTIF) {
+[e $ ! != -> . . _UIRbits 0 0 `i -> 0 `i 491  ]
+{
+"1375
+[; ;../../../usb/src/usb.c: 1375:   app_usb_reset_callback();
+[e ( _app_usb_reset_callback ..  ]
+"1377
+[; ;../../../usb/src/usb.c: 1377:   usb_init();
+[e ( _usb_init ..  ]
+"1378
+[; ;../../../usb/src/usb.c: 1378:   UIRbits.URSTIF = 0;
+[e = . . _UIRbits 0 0 -> -> 0 `i `uc ]
+"1380
+[; ;../../../usb/src/usb.c: 1380:  }
+}
+[e :U 491 ]
+"1382
+[; ;../../../usb/src/usb.c: 1382:  if (UIRbits.STALLIF) {
+[e $ ! != -> . . _UIRbits 0 5 `i -> 0 `i 492  ]
+{
+"1388
+[; ;../../../usb/src/usb.c: 1388:   int i;
+[v _i `i ~T0 @X0 1 a ]
+"1389
+[; ;../../../usb/src/usb.c: 1389:   for (i = 1; i <= 1; i++) {
+{
+[e = _i -> 1 `i ]
+[e $ <= _i -> 1 `i 493  ]
+[e $U 494  ]
+[e :U 493 ]
+{
+"1390
+[; ;../../../usb/src/usb.c: 1390:    volatile UEP1bits_t *ep = ((UEP1bits_t*) (&UEP0 + 1 * (i)));
+[v _ep `*VS270 ~T0 @X0 1 a ]
+[e = _ep -> -> + &U _UEP0 * -> * -> 1 `i _i `x -> -> # *U &U _UEP0 `i `x `*S270 `*VS270 ]
+"1391
+[; ;../../../usb/src/usb.c: 1391:    ep->EPSTALL = 0;
+[e = . . *U _ep 0 0 -> -> 0 `i `uc ]
+"1392
+[; ;../../../usb/src/usb.c: 1392:   }
+}
+[e ++ _i -> 1 `i ]
+[e $ <= _i -> 1 `i 493  ]
+[e :U 494 ]
+}
+"1394
+[; ;../../../usb/src/usb.c: 1394:   UIRbits.STALLIF = 0;
+[e = . . _UIRbits 0 5 -> -> 0 `i `uc ]
+"1395
+[; ;../../../usb/src/usb.c: 1395:  }
+}
+[e :U 492 ]
+"1399
+[; ;../../../usb/src/usb.c: 1399:  if (UIRbits.TRNIF && UIEbits.TRNIE) {
+[e $ ! && != -> . . _UIRbits 0 3 `i -> 0 `i != -> . . _UIEbits 0 3 `i -> 0 `i 496  ]
+{
+"1406
+[; ;../../../usb/src/usb.c: 1406:   if (USTATbits.ENDP == 0 && USTATbits.DIR == 0 ) {
+[e $ ! && == -> . . _USTATbits 0 3 `i -> 0 `i == -> . . _USTATbits 0 2 `i -> 0 `i 497  ]
+{
+"1413
+[; ;../../../usb/src/usb.c: 1413:    uint8_t pid = bds[0].STAT.PID;
+[v _pid `uc ~T0 @X0 1 a ]
+[e = _pid . . . *U + &U _bds * -> -> -> 0 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 0 2 ]
+"1415
+[; ;../../../usb/src/usb.c: 1415:    if (pid == PID_SETUP) {
+[e $ ! == -> _pid `i -> . `E2490 3 `i 498  ]
+{
+"1416
+[; ;../../../usb/src/usb.c: 1416:     handle_ep0_setup();
+[e ( _handle_ep0_setup ..  ]
+"1417
+[; ;../../../usb/src/usb.c: 1417:    }
+}
+[e $U 499  ]
+"1418
+[; ;../../../usb/src/usb.c: 1418:    else if (pid == PID_IN) {
+[e :U 498 ]
+[e $ ! == -> _pid `i -> . `E2490 1 `i 500  ]
+{
+"1421
+[; ;../../../usb/src/usb.c: 1421:    }
+}
+[e $U 501  ]
+"1422
+[; ;../../../usb/src/usb.c: 1422:    else if (pid == PID_OUT) {
+[e :U 500 ]
+[e $ ! == -> _pid `i -> . `E2490 0 `i 502  ]
+{
+"1423
+[; ;../../../usb/src/usb.c: 1423:     handle_ep0_out();
+[e ( _handle_ep0_out ..  ]
+"1424
+[; ;../../../usb/src/usb.c: 1424:    }
+}
+[e $U 503  ]
+"1425
+[; ;../../../usb/src/usb.c: 1425:    else {
+[e :U 502 ]
+{
+"1428
+[; ;../../../usb/src/usb.c: 1428:     stall_ep0();
+[e ( _stall_ep0 ..  ]
+"1429
+[; ;../../../usb/src/usb.c: 1429:    }
+}
+[e :U 503 ]
+[e :U 501 ]
+[e :U 499 ]
+"1431
+[; ;../../../usb/src/usb.c: 1431:    reset_bd0_out();
+[e ( _reset_bd0_out ..  ]
+"1432
+[; ;../../../usb/src/usb.c: 1432:   }
+}
+[e $U 504  ]
+"1433
+[; ;../../../usb/src/usb.c: 1433:   else if (USTATbits.ENDP == 0 && USTATbits.DIR == 1 ) {
+[e :U 497 ]
+[e $ ! && == -> . . _USTATbits 0 3 `i -> 0 `i == -> . . _USTATbits 0 2 `i -> 1 `i 505  ]
+{
+"1438
+[; ;../../../usb/src/usb.c: 1438:    handle_ep0_in();
+[e ( _handle_ep0_in ..  ]
+"1439
+[; ;../../../usb/src/usb.c: 1439:   }
+}
+[e $U 506  ]
+"1440
+[; ;../../../usb/src/usb.c: 1440:   else if (USTATbits.ENDP > 0 && USTATbits.ENDP <= 1) {
+[e :U 505 ]
+[e $ ! && > -> . . _USTATbits 0 3 `i -> 0 `i <= -> . . _USTATbits 0 3 `i -> 1 `i 507  ]
+{
+"1441
+[; ;../../../usb/src/usb.c: 1441:    if (USTATbits.DIR == 1 ) {
+[e $ ! == -> . . _USTATbits 0 2 `i -> 1 `i 508  ]
+{
+"1444
+[; ;../../../usb/src/usb.c: 1444:     if (ep_buf[USTATbits.ENDP].flags & 0x2)
+[e $ ! != & -> . *U + &U _ep_buf * -> . . _USTATbits 0 3 `ux -> -> # *U &U _ep_buf `ui `ux 4 `i -> 2 `i -> 0 `i 509  ]
+"1445
+[; ;../../../usb/src/usb.c: 1445:      stall_ep_in(USTATbits.ENDP);
+[e ( _stall_ep_in (1 . . _USTATbits 0 3 ]
+[e $U 510  ]
+"1446
+[; ;../../../usb/src/usb.c: 1446:     else {
+[e :U 509 ]
+{
+"1448
+[; ;../../../usb/src/usb.c: 1448:      app_in_transaction_complete_callback(USTATbits.ENDP);
+[e ( _app_in_transaction_complete_callback (1 . . _USTATbits 0 3 ]
+"1450
+[; ;../../../usb/src/usb.c: 1450:     }
+}
+[e :U 510 ]
+"1451
+[; ;../../../usb/src/usb.c: 1451:    }
+}
+[e $U 511  ]
+"1452
+[; ;../../../usb/src/usb.c: 1452:    else {
+[e :U 508 ]
+{
+"1455
+[; ;../../../usb/src/usb.c: 1455:     if (ep_buf[USTATbits.ENDP].flags & 0x1)
+[e $ ! != & -> . *U + &U _ep_buf * -> . . _USTATbits 0 3 `ux -> -> # *U &U _ep_buf `ui `ux 4 `i -> 1 `i -> 0 `i 512  ]
+"1456
+[; ;../../../usb/src/usb.c: 1456:      stall_ep_out(USTATbits.ENDP);
+[e ( _stall_ep_out (1 . . _USTATbits 0 3 ]
+[e $U 513  ]
+"1457
+[; ;../../../usb/src/usb.c: 1457:     else {
+[e :U 512 ]
+{
+"1459
+[; ;../../../usb/src/usb.c: 1459:      app_out_transaction_callback(USTATbits.ENDP);
+[e ( _app_out_transaction_callback (1 . . _USTATbits 0 3 ]
+"1461
+[; ;../../../usb/src/usb.c: 1461:     }
+}
+[e :U 513 ]
+"1462
+[; ;../../../usb/src/usb.c: 1462:    }
+}
+[e :U 511 ]
+"1463
+[; ;../../../usb/src/usb.c: 1463:   }
+}
+[e $U 514  ]
+"1464
+[; ;../../../usb/src/usb.c: 1464:   else {
+[e :U 507 ]
+{
+"1468
+[; ;../../../usb/src/usb.c: 1468:   }
+}
+[e :U 514 ]
+[e :U 506 ]
+[e :U 504 ]
+"1470
+[; ;../../../usb/src/usb.c: 1470:   UIRbits.TRNIF = 0;
+[e = . . _UIRbits 0 3 -> -> 0 `i `uc ]
+"1471
+[; ;../../../usb/src/usb.c: 1471:  }
+}
+[e :U 496 ]
+"1474
+[; ;../../../usb/src/usb.c: 1474:  if (UIRbits.SOFIF) {
+[e $ ! != -> . . _UIRbits 0 6 `i -> 0 `i 515  ]
+{
+"1476
+[; ;../../../usb/src/usb.c: 1476:   app_start_of_frame_callback();
+[e ( _app_start_of_frame_callback ..  ]
+"1478
+[; ;../../../usb/src/usb.c: 1478:   UIRbits.SOFIF = 0;
+[e = . . _UIRbits 0 6 -> -> 0 `i `uc ]
+"1479
+[; ;../../../usb/src/usb.c: 1479:  }
+}
+[e :U 515 ]
+"1482
+[; ;../../../usb/src/usb.c: 1482:  if (PIR2bits.USBIF) {
+[e $ ! != -> . . _PIR2bits 0 2 `i -> 0 `i 516  ]
+{
+"1483
+[; ;../../../usb/src/usb.c: 1483:   PIR2bits.USBIF = 0;
+[e = . . _PIR2bits 0 2 -> -> 0 `i `uc ]
+"1484
+[; ;../../../usb/src/usb.c: 1484:  }
+}
+[e :U 516 ]
+"1485
+[; ;../../../usb/src/usb.c: 1485: }
+[e :UE 490 ]
+}
+"1487
+[; ;../../../usb/src/usb.c: 1487: uint8_t usb_get_configuration(void)
+[v _usb_get_configuration `(uc ~T0 @X0 1 ef ]
+"1488
+[; ;../../../usb/src/usb.c: 1488: {
+{
+[e :U _usb_get_configuration ]
+[f ]
+"1489
+[; ;../../../usb/src/usb.c: 1489:  return g_configuration;
+[e ) _g_configuration ]
+[e $UE 517  ]
+"1490
+[; ;../../../usb/src/usb.c: 1490: }
+[e :UE 517 ]
+}
+"1492
+[; ;../../../usb/src/usb.c: 1492: unsigned char *usb_get_in_buffer(uint8_t endpoint)
+[v _usb_get_in_buffer `(*uc ~T0 @X0 1 ef1`uc ]
+"1493
+[; ;../../../usb/src/usb.c: 1493: {
+{
+[e :U _usb_get_in_buffer ]
+"1492
+[; ;../../../usb/src/usb.c: 1492: unsigned char *usb_get_in_buffer(uint8_t endpoint)
+[v _endpoint `uc ~T0 @X0 1 r1 ]
+"1493
+[; ;../../../usb/src/usb.c: 1493: {
+[f ]
+"1500
+[; ;../../../usb/src/usb.c: 1500:  return ep_buf[endpoint].in;
+[e ) . *U + &U _ep_buf * -> _endpoint `ux -> -> # *U &U _ep_buf `ui `ux 1 ]
+[e $UE 518  ]
+"1502
+[; ;../../../usb/src/usb.c: 1502: }
+[e :UE 518 ]
+}
+"1504
+[; ;../../../usb/src/usb.c: 1504: void usb_send_in_buffer(uint8_t endpoint, size_t len)
+[v _usb_send_in_buffer `(v ~T0 @X0 1 ef2`uc`ui ]
+"1505
+[; ;../../../usb/src/usb.c: 1505: {
+{
+[e :U _usb_send_in_buffer ]
+"1504
+[; ;../../../usb/src/usb.c: 1504: void usb_send_in_buffer(uint8_t endpoint, size_t len)
+[v _endpoint `uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+"1505
+[; ;../../../usb/src/usb.c: 1505: {
+[f ]
+"1510
+[; ;../../../usb/src/usb.c: 1510:  if (g_configuration > 0 && !usb_in_endpoint_halted(endpoint)) {
+[e $ ! && > -> _g_configuration `i -> 0 `i ! != -> ( _usb_in_endpoint_halted (1 _endpoint `i -> 0 `i 520  ]
+{
+"1511
+[; ;../../../usb/src/usb.c: 1511:   uint8_t pid;
+[v _pid `uc ~T0 @X0 1 a ]
+"1512
+[; ;../../../usb/src/usb.c: 1512:   struct buffer_descriptor *bd;
+[v _bd `*S315 ~T0 @X0 1 a ]
+"1530
+[; ;../../../usb/src/usb.c: 1530:   bd = &bds[(endpoint) * 2 + 1];
+[e = _bd &U *U + &U _bds * -> -> + * -> _endpoint `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux ]
+"1531
+[; ;../../../usb/src/usb.c: 1531:   pid = (ep_buf[endpoint].flags & 0x8)? 1 : 0;
+[e = _pid -> ? != & -> . *U + &U _ep_buf * -> _endpoint `ux -> -> # *U &U _ep_buf `ui `ux 4 `i -> 8 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
+"1532
+[; ;../../../usb/src/usb.c: 1532:   bd->STAT.BDnSTAT = 0;
+[e = . . *U _bd 0 2 -> -> 0 `i `uc ]
+"1534
+[; ;../../../usb/src/usb.c: 1534:   if (pid)
+[e $ ! != -> _pid `i -> 0 `i 521  ]
+"1535
+[; ;../../../usb/src/usb.c: 1535:    do { (*bd).BDnCNT = (len); (*bd).STAT.BDnSTAT = (0x80|0x40|0x08); } while(0);
+[e :U 524 ]
+{
+[e = . *U _bd 1 -> _len `uc ]
+[e = . . *U _bd 0 2 -> | | -> 128 `i -> 64 `i -> 8 `i `uc ]
+}
+[e :U 523 ]
+[e $U 525  ]
+"1537
+[; ;../../../usb/src/usb.c: 1537:   else
+[e :U 521 ]
+"1538
+[; ;../../../usb/src/usb.c: 1538:    do { (*bd).BDnCNT = (len); (*bd).STAT.BDnSTAT = (0x80|0x08); } while(0);
+[e :U 528 ]
+{
+[e = . *U _bd 1 -> _len `uc ]
+[e = . . *U _bd 0 2 -> | -> 128 `i -> 8 `i `uc ]
+}
+[e :U 527 ]
+[e :U 525 ]
+"1541
+[; ;../../../usb/src/usb.c: 1541:   ep_buf[endpoint].flags ^= 0x8;
+[e =^ . *U + &U _ep_buf * -> _endpoint `ux -> -> # *U &U _ep_buf `ui `ux 4 -> -> 8 `i `uc ]
+"1543
+[; ;../../../usb/src/usb.c: 1543:  }
+}
+[e :U 520 ]
+"1544
+[; ;../../../usb/src/usb.c: 1544: }
+[e :UE 519 ]
+}
+"1546
+[; ;../../../usb/src/usb.c: 1546: _Bool usb_in_endpoint_busy(uint8_t endpoint)
+[v _usb_in_endpoint_busy `(a ~T0 @X0 1 ef1`uc ]
+"1547
+[; ;../../../usb/src/usb.c: 1547: {
+{
+[e :U _usb_in_endpoint_busy ]
+"1546
+[; ;../../../usb/src/usb.c: 1546: _Bool usb_in_endpoint_busy(uint8_t endpoint)
+[v _endpoint `uc ~T0 @X0 1 r1 ]
+"1547
+[; ;../../../usb/src/usb.c: 1547: {
+[f ]
+"1552
+[; ;../../../usb/src/usb.c: 1552:  return bds[(endpoint) * 2 + 1].STAT.UOWN;
+[e ) -> . . . *U + &U _bds * -> -> + * -> _endpoint `i -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 0 4 `a ]
+[e $UE 529  ]
+"1554
+[; ;../../../usb/src/usb.c: 1554: }
+[e :UE 529 ]
+}
+"1556
+[; ;../../../usb/src/usb.c: 1556: uint8_t usb_halt_ep_in(uint8_t ep)
+[v _usb_halt_ep_in `(uc ~T0 @X0 1 ef1`uc ]
+"1557
+[; ;../../../usb/src/usb.c: 1557: {
+{
+[e :U _usb_halt_ep_in ]
+"1556
+[; ;../../../usb/src/usb.c: 1556: uint8_t usb_halt_ep_in(uint8_t ep)
+[v _ep `uc ~T0 @X0 1 r1 ]
+"1557
+[; ;../../../usb/src/usb.c: 1557: {
+[f ]
+"1558
+[; ;../../../usb/src/usb.c: 1558:  if (ep == 0 || ep > 1)
+[e $ ! || == -> _ep `i -> 0 `i > -> _ep `i -> 1 `i 531  ]
+"1559
+[; ;../../../usb/src/usb.c: 1559:   return -1;
+[e ) -> -U -> 1 `i `uc ]
+[e $UE 530  ]
+[e :U 531 ]
+"1561
+[; ;../../../usb/src/usb.c: 1561:  ep_buf[ep].flags |= 0x2;
+[e =| . *U + &U _ep_buf * -> _ep `ux -> -> # *U &U _ep_buf `ui `ux 4 -> -> 2 `i `uc ]
+"1562
+[; ;../../../usb/src/usb.c: 1562:  stall_ep_in(ep);
+[e ( _stall_ep_in (1 _ep ]
+"1564
+[; ;../../../usb/src/usb.c: 1564:  return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 530  ]
+"1565
+[; ;../../../usb/src/usb.c: 1565: }
+[e :UE 530 ]
+}
+"1567
+[; ;../../../usb/src/usb.c: 1567: _Bool usb_in_endpoint_halted(uint8_t endpoint)
+[v _usb_in_endpoint_halted `(a ~T0 @X0 1 ef1`uc ]
+"1568
+[; ;../../../usb/src/usb.c: 1568: {
+{
+[e :U _usb_in_endpoint_halted ]
+"1567
+[; ;../../../usb/src/usb.c: 1567: _Bool usb_in_endpoint_halted(uint8_t endpoint)
+[v _endpoint `uc ~T0 @X0 1 r1 ]
+"1568
+[; ;../../../usb/src/usb.c: 1568: {
+[f ]
+"1569
+[; ;../../../usb/src/usb.c: 1569:  return ep_buf[endpoint].flags & 0x2;
+[e ) -> & -> . *U + &U _ep_buf * -> _endpoint `ux -> -> # *U &U _ep_buf `ui `ux 4 `i -> 2 `i `a ]
+[e $UE 532  ]
+"1570
+[; ;../../../usb/src/usb.c: 1570: }
+[e :UE 532 ]
+}
+"1572
+[; ;../../../usb/src/usb.c: 1572: uint8_t usb_get_out_buffer(uint8_t endpoint, const unsigned char **buf)
+[v _usb_get_out_buffer `(uc ~T0 @X0 1 ef2`uc`**Cuc ]
+"1573
+[; ;../../../usb/src/usb.c: 1573: {
+{
+[e :U _usb_get_out_buffer ]
+"1572
+[; ;../../../usb/src/usb.c: 1572: uint8_t usb_get_out_buffer(uint8_t endpoint, const unsigned char **buf)
+[v _endpoint `uc ~T0 @X0 1 r1 ]
+[v _buf `**Cuc ~T0 @X0 1 r2 ]
+"1573
+[; ;../../../usb/src/usb.c: 1573: {
+[f ]
+"1584
+[; ;../../../usb/src/usb.c: 1584:  *buf = ep_buf[endpoint].out;
+[e = *U _buf -> . *U + &U _ep_buf * -> _endpoint `ux -> -> # *U &U _ep_buf `ui `ux 0 `*Cuc ]
+"1585
+[; ;../../../usb/src/usb.c: 1585:  return (bds[(endpoint) * 2].BDnCNT);
+[e ) . *U + &U _bds * -> -> * -> _endpoint `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 ]
+[e $UE 533  ]
+"1587
+[; ;../../../usb/src/usb.c: 1587: }
+[e :UE 533 ]
+}
+"1589
+[; ;../../../usb/src/usb.c: 1589: _Bool usb_out_endpoint_has_data(uint8_t endpoint)
+[v _usb_out_endpoint_has_data `(a ~T0 @X0 1 ef1`uc ]
+"1590
+[; ;../../../usb/src/usb.c: 1590: {
+{
+[e :U _usb_out_endpoint_has_data ]
+"1589
+[; ;../../../usb/src/usb.c: 1589: _Bool usb_out_endpoint_has_data(uint8_t endpoint)
+[v _endpoint `uc ~T0 @X0 1 r1 ]
+"1590
+[; ;../../../usb/src/usb.c: 1590: {
+[f ]
+"1595
+[; ;../../../usb/src/usb.c: 1595:  return !bds[(endpoint) * 2].STAT.UOWN;
+[e ) -> -> ! != -> . . . *U + &U _bds * -> -> * -> _endpoint `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 0 4 `i -> 0 `i `i `a ]
+[e $UE 534  ]
+"1597
+[; ;../../../usb/src/usb.c: 1597: }
+[e :UE 534 ]
+}
+"1599
+[; ;../../../usb/src/usb.c: 1599: void usb_arm_out_endpoint(uint8_t endpoint)
+[v _usb_arm_out_endpoint `(v ~T0 @X0 1 ef1`uc ]
+"1600
+[; ;../../../usb/src/usb.c: 1600: {
+{
+[e :U _usb_arm_out_endpoint ]
+"1599
+[; ;../../../usb/src/usb.c: 1599: void usb_arm_out_endpoint(uint8_t endpoint)
+[v _endpoint `uc ~T0 @X0 1 r1 ]
+"1600
+[; ;../../../usb/src/usb.c: 1600: {
+[f ]
+"1619
+[; ;../../../usb/src/usb.c: 1619:  uint8_t pid = (ep_buf[endpoint].flags & 0x4)? 1: 0;
+[v _pid `uc ~T0 @X0 1 a ]
+[e = _pid -> ? != & -> . *U + &U _ep_buf * -> _endpoint `ux -> -> # *U &U _ep_buf `ui `ux 4 `i -> 4 `i -> 0 `i : -> 1 `i -> 0 `i `uc ]
+"1620
+[; ;../../../usb/src/usb.c: 1620:  if (pid)
+[e $ ! != -> _pid `i -> 0 `i 536  ]
+"1621
+[; ;../../../usb/src/usb.c: 1621:   do { (bds[(endpoint) * 2]).BDnCNT = (ep_buf[endpoint].out_len); (bds[(endpoint) * 2]).STAT.BDnSTAT = (0x80|0x40|0x08); } while(0);
+[e :U 539 ]
+{
+[e = . *U + &U _bds * -> -> * -> _endpoint `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 . *U + &U _ep_buf * -> _endpoint `ux -> -> # *U &U _ep_buf `ui `ux 2 ]
+[e = . . *U + &U _bds * -> -> * -> _endpoint `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> | | -> 128 `i -> 64 `i -> 8 `i `uc ]
+}
+[e :U 538 ]
+[e $U 540  ]
+"1624
+[; ;../../../usb/src/usb.c: 1624:  else
+[e :U 536 ]
+"1625
+[; ;../../../usb/src/usb.c: 1625:   do { (bds[(endpoint) * 2]).BDnCNT = (ep_buf[endpoint].out_len); (bds[(endpoint) * 2]).STAT.BDnSTAT = (0x80|0x08); } while(0);
+[e :U 543 ]
+{
+[e = . *U + &U _bds * -> -> * -> _endpoint `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 1 . *U + &U _ep_buf * -> _endpoint `ux -> -> # *U &U _ep_buf `ui `ux 2 ]
+[e = . . *U + &U _bds * -> -> * -> _endpoint `i -> 2 `i `ui `ux -> -> # *U &U _bds `ui `ux 0 2 -> | -> 128 `i -> 8 `i `uc ]
+}
+[e :U 542 ]
+[e :U 540 ]
+"1629
+[; ;../../../usb/src/usb.c: 1629:  ep_buf[endpoint].flags ^= 0x4;
+[e =^ . *U + &U _ep_buf * -> _endpoint `ux -> -> # *U &U _ep_buf `ui `ux 4 -> -> 4 `i `uc ]
+"1632
+[; ;../../../usb/src/usb.c: 1632: }
+[e :UE 535 ]
+}
+"1634
+[; ;../../../usb/src/usb.c: 1634: uint8_t usb_halt_ep_out(uint8_t ep)
+[v _usb_halt_ep_out `(uc ~T0 @X0 1 ef1`uc ]
+"1635
+[; ;../../../usb/src/usb.c: 1635: {
+{
+[e :U _usb_halt_ep_out ]
+"1634
+[; ;../../../usb/src/usb.c: 1634: uint8_t usb_halt_ep_out(uint8_t ep)
+[v _ep `uc ~T0 @X0 1 r1 ]
+"1635
+[; ;../../../usb/src/usb.c: 1635: {
+[f ]
+"1636
+[; ;../../../usb/src/usb.c: 1636:  if (ep == 0 || ep > 1)
+[e $ ! || == -> _ep `i -> 0 `i > -> _ep `i -> 1 `i 545  ]
+"1637
+[; ;../../../usb/src/usb.c: 1637:   return -1;
+[e ) -> -U -> 1 `i `uc ]
+[e $UE 544  ]
+[e :U 545 ]
+"1639
+[; ;../../../usb/src/usb.c: 1639:  ep_buf[ep].flags |= 0x1;
+[e =| . *U + &U _ep_buf * -> _ep `ux -> -> # *U &U _ep_buf `ui `ux 4 -> -> 1 `i `uc ]
+"1640
+[; ;../../../usb/src/usb.c: 1640:  stall_ep_out(ep);
+[e ( _stall_ep_out (1 _ep ]
+"1642
+[; ;../../../usb/src/usb.c: 1642:  return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 544  ]
+"1643
+[; ;../../../usb/src/usb.c: 1643: }
+[e :UE 544 ]
+}
+"1645
+[; ;../../../usb/src/usb.c: 1645: _Bool usb_out_endpoint_halted(uint8_t endpoint)
+[v _usb_out_endpoint_halted `(a ~T0 @X0 1 ef1`uc ]
+"1646
+[; ;../../../usb/src/usb.c: 1646: {
+{
+[e :U _usb_out_endpoint_halted ]
+"1645
+[; ;../../../usb/src/usb.c: 1645: _Bool usb_out_endpoint_halted(uint8_t endpoint)
+[v _endpoint `uc ~T0 @X0 1 r1 ]
+"1646
+[; ;../../../usb/src/usb.c: 1646: {
+[f ]
+"1647
+[; ;../../../usb/src/usb.c: 1647:  return ep_buf[endpoint].flags & 0x1;
+[e ) -> & -> . *U + &U _ep_buf * -> _endpoint `ux -> -> # *U &U _ep_buf `ui `ux 4 `i -> 1 `i `a ]
+[e $UE 546  ]
+"1648
+[; ;../../../usb/src/usb.c: 1648: }
+[e :UE 546 ]
+}
+"1650
+[; ;../../../usb/src/usb.c: 1650: void usb_start_receive_ep0_data_stage(char *buffer, size_t len,
+[v _usb_start_receive_ep0_data_stage `(v ~T0 @X0 1 ef4`*uc`ui`*F2833`*v ]
+"1652
+[; ;../../../usb/src/usb.c: 1652: {
+{
+[e :U _usb_start_receive_ep0_data_stage ]
+"1650
+[; ;../../../usb/src/usb.c: 1650: void usb_start_receive_ep0_data_stage(char *buffer, size_t len,
+[v _buffer `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+"1651
+[; ;../../../usb/src/usb.c: 1651:                                       usb_ep0_data_stage_callback callback, void *context)
+[v _callback `*F2839 ~T0 @X0 1 r3 ]
+[v _context `*v ~T0 @X0 1 r4 ]
+"1652
+[; ;../../../usb/src/usb.c: 1652: {
+[f ]
+"1653
+[; ;../../../usb/src/usb.c: 1653:  reset_ep0_data_stage();
+[e ( _reset_ep0_data_stage ..  ]
+"1655
+[; ;../../../usb/src/usb.c: 1655:  ep0_data_stage_callback = callback;
+[e = _ep0_data_stage_callback _callback ]
+"1656
+[; ;../../../usb/src/usb.c: 1656:  ep0_data_stage_out_buffer = buffer;
+[e = _ep0_data_stage_out_buffer _buffer ]
+"1657
+[; ;../../../usb/src/usb.c: 1657:  ep0_data_stage_buf_remaining = len;
+[e = _ep0_data_stage_buf_remaining _len ]
+"1658
+[; ;../../../usb/src/usb.c: 1658:  ep0_data_stage_context = context;
+[e = _ep0_data_stage_context _context ]
+"1659
+[; ;../../../usb/src/usb.c: 1659: }
+[e :UE 547 ]
+}
+"1661
+[; ;../../../usb/src/usb.c: 1661: void usb_send_data_stage(char *buffer, size_t len,
+[v _usb_send_data_stage `(v ~T0 @X0 1 ef4`*uc`ui`*F2847`*v ]
+"1663
+[; ;../../../usb/src/usb.c: 1663: {
+{
+[e :U _usb_send_data_stage ]
+"1661
+[; ;../../../usb/src/usb.c: 1661: void usb_send_data_stage(char *buffer, size_t len,
+[v _buffer `*uc ~T0 @X0 1 r1 ]
+[v _len `ui ~T0 @X0 1 r2 ]
+"1662
+[; ;../../../usb/src/usb.c: 1662:  usb_ep0_data_stage_callback callback, void *context)
+[v _callback `*F2853 ~T0 @X0 1 r3 ]
+[v _context `*v ~T0 @X0 1 r4 ]
+"1663
+[; ;../../../usb/src/usb.c: 1663: {
+[f ]
+"1666
+[; ;../../../usb/src/usb.c: 1666:  ep0_data_stage_callback = callback;
+[e = _ep0_data_stage_callback _callback ]
+"1667
+[; ;../../../usb/src/usb.c: 1667:  ep0_data_stage_context = context;
+[e = _ep0_data_stage_context _context ]
+"1668
+[; ;../../../usb/src/usb.c: 1668:  start_control_return(buffer, len, len);
+[e ( _start_control_return (3 , , -> _buffer `*Cv _len _len ]
+"1669
+[; ;../../../usb/src/usb.c: 1669: }
+[e :UE 548 ]
+}
+"1677
+[; ;../../../usb/src/usb.c: 1677: void usb_disable_transaction_interrupt()
+[v _usb_disable_transaction_interrupt `(v ~T0 @X0 1 ef ]
+"1678
+[; ;../../../usb/src/usb.c: 1678: {
+{
+[e :U _usb_disable_transaction_interrupt ]
+[f ]
+"1679
+[; ;../../../usb/src/usb.c: 1679:  UIEbits.TRNIE = 0;
+[e = . . _UIEbits 0 3 -> -> 0 `i `uc ]
+"1680
+[; ;../../../usb/src/usb.c: 1680: }
+[e :UE 549 ]
+}
+"1681
+[; ;../../../usb/src/usb.c: 1681: void usb_enable_transaction_interrupt()
+[v _usb_enable_transaction_interrupt `(v ~T0 @X0 1 ef ]
+"1682
+[; ;../../../usb/src/usb.c: 1682: {
+{
+[e :U _usb_enable_transaction_interrupt ]
+[f ]
+"1683
+[; ;../../../usb/src/usb.c: 1683:  UIEbits.TRNIE = 1;
+[e = . . _UIEbits 0 3 -> -> 1 `i `uc ]
+"1684
+[; ;../../../usb/src/usb.c: 1684: }
+[e :UE 550 ]
+}

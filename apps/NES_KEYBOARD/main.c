@@ -26,36 +26,10 @@
 #include "usb_ch9.h"
 #include "usb_hid.h"
 
-#ifdef __PIC32MX__
-	#include <plib.h>
-#endif
+#define _XTAL_FREQ 48000000L
 
-#ifdef __PIC24FJ64GB002__
-_CONFIG1(WDTPS_PS16 & FWPSA_PR32 & WINDIS_OFF & FWDTEN_OFF & ICS_PGx1 & GWRP_OFF & GCP_OFF & JTAGEN_OFF)
-_CONFIG2(POSCMOD_NONE & I2C1SEL_PRI & IOL1WAY_OFF & OSCIOFNC_OFF & FCKSM_CSDCMD & FNOSC_FRCPLL & PLL96MHZ_ON & PLLDIV_NODIV & IESO_OFF)
-_CONFIG3(WPFP_WPFP0 & SOSCSEL_IO & WUTSEL_LEG & WPDIS_WPDIS & WPCFG_WPCFGDIS & WPEND_WPENDMEM)
-_CONFIG4(DSWDTPS_DSWDTPS3 & DSWDTOSC_SOSC & RTCOSC_SOSC & DSBOREN_OFF & DSWDTEN_OFF)
 
-#elif __PIC24FJ256DA206__
-_CONFIG1(WDTPS_PS32768 & FWPSA_PR128 & WINDIS_OFF & FWDTEN_OFF & ICS_PGx2 & GWRP_OFF & GCP_OFF & JTAGEN_OFF)
-_CONFIG2(POSCMOD_NONE & IOL1WAY_OFF & OSCIOFNC_ON & FCKSM_CSECMD & FNOSC_FRCPLL & PLL96MHZ_ON & PLLDIV_NODIV & IESO_OFF)
-_CONFIG3(WPFP_WPFP255 & SOSCSEL_SOSC & WUTSEL_LEG & ALTPMP_ALPMPDIS & WPDIS_WPDIS & WPCFG_WPCFGDIS & WPEND_WPENDMEM)
-
-#elif _18F46J50
-#pragma config PLLDIV = 3 /* 3 = Divide by 3. 12MHz crystal => 4MHz */
-#pragma config XINST = OFF
-#pragma config WDTEN = OFF
-#pragma config CPUDIV = OSC1
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LPT1OSC = OFF
-#pragma config T1DIG = ON
-#pragma config OSC = ECPLL
-#pragma config DSWDTEN = OFF
-#pragma config IOL1WAY = OFF
-#pragma config WPDIS = OFF /* This pragma seems backwards */
-
-#elif _16F1459 || _16F1455 || _16F1454
+#ifdef _16F1455
 #pragma config FOSC = INTOSC
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -75,13 +49,6 @@ _CONFIG3(WPFP_WPFP255 & SOSCSEL_SOSC & WUTSEL_LEG & ALTPMP_ALPMPDIS & WPDIS_WPDI
 #pragma config LPBOR = ON
 #pragma config LVP = OFF
 
-#elif __32MX460F512L__
-#pragma config DEBUG = OFF, ICESEL = ICS_PGx2, PWP = OFF, BWP = OFF, CP = OFF
-#pragma config FNOSC = PRIPLL, FSOSCEN = OFF, IESO = OFF, POSCMOD = HS, \
-	       OSCIOFNC = OFF, FPBDIV = DIV_1, FCKSM = CSDCMD, WDTPS = PS1, \
-	       FWDTEN = OFF
-#pragma config FPLLIDIV = DIV_2, FPLLMUL = MUL_15, UPLLIDIV = DIV_2, \
-	       UPLLEN = ON, FPLLODIV = DIV_1
 
 #else
 	#error "Config flags for your device not defined"
@@ -135,31 +102,52 @@ int main(void)
      	 * for every IN packet.
 	 */
 	uint8_t button = 0;
-
+    
+    ANSELC = 0;
+    
+    //ANSELA = 0;
+    ANSELAbits.ANSA4 = 0;
+    TRISAbits.TRISA4 = 0;  //Set RA4 as output
+    TRISCbits.TRISC3 = 0b0;  //Set RC3 as output
+    TRISCbits.TRISC2 = 0b1; //Set RC2 as input
+    
 	while (1) {
-		if (usb_is_configured() &&
-		    !usb_in_endpoint_halted(1) &&
-		    !usb_in_endpoint_busy(1)) {
-
-			unsigned char *buf = usb_get_in_buffer(1);
-            
-            if(PORTAbits.RA3 != button){
-                button = PORTAbits.RA3;
-                buf[0] = (!button?0x03:0x00); // modifier (shift+ctrl)
-                buf[1] = 0x00; // reserved
-                buf[2] = (!button?0x1e:0x00); // key (1)
-                buf[3] = 0x00;
-                buf[4] = 0x00;
-                buf[5] = 0x00;
-                buf[6] = 0x00;
-                buf[7] = 0x00;
-            }
-            usb_send_in_buffer(1, 8);
-		}
-
-		#ifndef USB_USE_INTERRUPTS
-		usb_service();
-		#endif
+//		if (usb_is_configured() &&
+//		    !usb_in_endpoint_halted(1) &&
+//		    !usb_in_endpoint_busy(1)) {
+//
+//			unsigned char *buf = usb_get_in_buffer(1);
+//            
+//            if(PORTAbits.RA3 != button){
+//                button = PORTAbits.RA3;
+//                //buf[0] = (!button?0x03:0x00); // modifier (shift+ctrl)
+//                buf[0] = 0x00;
+//                buf[1] = 0x00; // reserved
+//                buf[2] = (!button?0x1e:0x00); // key (1)
+//                buf[3] = 0x00;
+//                buf[4] = 0x00;
+//                buf[5] = 0x00;
+//                buf[6] = 0x00;
+//                buf[7] = 0x00;
+//            }
+//            usb_send_in_buffer(1, 8);
+//		}
+//
+//		#ifndef USB_USE_INTERRUPTS
+//		usb_service();
+//		#endif
+        //PORTCbits.RC3 = PORTCbits.RC4;
+        //if (PORTCbits.RC2 == 1)
+        //if(PORTCbits.RC2 != button)
+        if(PORTCbits.RC2 != button)
+        {
+        PORTCbits.RC3 = ~PORTCbits.RC3;
+        PORTAbits.RA4 = ~PORTCbits.RC3;
+        __delay_ms(500);
+        PORTCbits.RC3 = ~PORTCbits.RC3;
+        PORTAbits.RA4 = ~PORTCbits.RC3;
+        __delay_ms(500);
+        }
 	}
 
 	return 0;
@@ -291,20 +279,13 @@ int8_t app_set_protocol_callback(uint8_t interface, uint8_t report_id)
 }
 
 
-#ifdef _PIC14E
-void interrupt isr()
-{
-	usb_service();
-}
-#elif _PIC18
+
 
 #ifdef __XC8
-void interrupt high_priority isr()
+//void interrupt high_priority isr()
+void __interrupt () isr (void)
 {
 	usb_service();
 }
-#elif _PICC18
-#error need to make ISR
 #endif
 
-#endif

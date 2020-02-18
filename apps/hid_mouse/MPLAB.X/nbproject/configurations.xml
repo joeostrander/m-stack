@@ -79,6 +79,12 @@
         <C30-LD>
         </C30-LD>
         <C30Global>
+          <property key="fast-math" value="false"/>
+          <property key="generic-16-bit" value="false"/>
+          <property key="legacy-libc" value="false"/>
+          <property key="oXC16glb-macros" value=""/>
+          <property key="output-file-format" value="elf"/>
+          <property key="save-temps" value="false"/>
         </C30Global>
       </item>
       <item path="../../bootloader/firmware/gld/pic24fj64gb002-bootloader.gld"
